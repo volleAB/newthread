@@ -1,5 +1,7 @@
 # newthread2017
 
+[![Build Status](https://travis-ci.org/volleAB/newthread2017)
+
 > * newthread2017
 > * still working
 > * ...
