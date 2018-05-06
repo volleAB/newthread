@@ -15,6 +15,16 @@ array(
 
 
 <?php 
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+}
+ 
+if ( function_exists( 'add_image_size' ) ) {
+    add_image_size( 'customized-post-thumb', 100, 400 );
+}
+?>
+
+<?php 
 /**
 * WordPress 添加面包屑导航
 * https://www.wpdaxue.com/wordpress-add-a-breadcrumb.html

@@ -565,6 +565,10 @@ footer{
 	margin: 0 auto;
 }
 
+.news-single-content .single-body p:nth-child(2){
+  text-indent: 2em;
+}
+
 .news-single-content h2{
 	text-align: center;
 }

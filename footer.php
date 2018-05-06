@@ -115,8 +115,8 @@
 	        </div>
 		</div>
 		<div class="contact">
-			<img src="<?php bloginfo('template_directory'); ?>/images/右边.png">
-			<img src="<?php bloginfo('template_directory'); ?>/images/左边.png">
+			<img src="<?php bloginfo('template_directory'); ?>/images/left.png">
+			<img src="<?php bloginfo('template_directory'); ?>/images/right.png">
 		</div>
 	</div>
 	<div class="about">

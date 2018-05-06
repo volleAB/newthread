@@ -3,16 +3,35 @@
 <?php $cat_ids = get_all_category_ids(); ?>
 <div class="js-silder">
    <div class="silder-scroll">
-		<div class="silder-main">
-			<div class="silder-main-img">
-				<img src="<?php bloginfo('template_directory'); ?>/images/bg.png" alt="">
-			</div>
-			<div class="silder-main-img">
-				<img src="<?php bloginfo('template_directory'); ?>/images/bg.png" alt="">
-			</div>
-			<div class="silder-main-img">
-				<img src="<?php bloginfo('template_directory'); ?>/images/bg.png" alt="">
-			</div>
+		<div class="silder-main">	<!-- 从后台获取 -->
+				<?php
+					// 定义查询1的参数
+					$args1 = array(
+					    'post_type' => 'post',
+					    'posts_per_page' => '3',
+					    'category_name' => 'bg'
+					);
+					// 自定义查询1
+					$query1 = new WP_Query( $args1 );
+					// 判断是否有文章.
+					if ( $query1->have_posts() ) {
+					    // 开始循环往复的查询结果.
+					while ( $query1->have_posts() ) {
+					        $query1->the_post();
+				?>
+				<div class="silder-main-img">
+					<?php if ( has_post_thumbnail() ) : ?>
+					    <?php the_post_thumbnail( 'full' ); ?>
+						<?php else: ?>
+					    	//显示默认图片
+					<?php endif; ?>		
+				</div>
+					<?php
+					    }
+					}
+					// 重置请求数据.
+					wp_reset_postdata();
+					?>
 		</div>
 	</div>
 </div>
@@ -39,7 +58,7 @@
 		    while ( $query1->have_posts() ) {
 		        $query1->the_post();
 		        ?>
-		        <div class="m-l"><img src="<?php bloginfo('template_directory'); ?>/images/介绍图片.png"><div class="bor"></div></div>	<!-- 从后台获取 -->
+		        <div class="m-l"><img src="<?php bloginfo('template_directory'); ?>/images/introduce.png"><div class="bor"></div></div>	<!-- 从后台获取 -->
 				<div class="m-r">
 					<h2><?php the_title(); ?></h2>
 					<p>新思路团队成立于2009年。本团队始终坚持“钻研、协作、创新、服务”的理念，并以培养学生的 “自主学习精神、相互协作能力以及服务社会的责任”为目标，聚集着一群有激情、有活力、有创造力 的年轻人……</p>
@@ -78,12 +97,12 @@
         	<?php if ( has_post_thumbnail() ) : ?>
      		<?php the_post_thumbnail( 'thumbnail' ); ?>
 			<?php else: ?>
-    		//显示默认图片
+    			<img src="<?php echo get_template_directory_uri();  ?>/images/news.png">
 			<?php endif; ?>
         	<h3><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                <?php the_title(); ?>
+                <!-- <?php the_title(); ?> --><?php echo wp_trim_words( get_the_title(), 15 ); ?>
             </a></h3>
-            <?php the_content(); ?>
+            <!-- <?php the_excerpt(); ?> --><p><?php echo wp_trim_words( get_the_excerpt(), 300 ); ?></p>
             <div class="time">
             	<h2><?php the_time('m-d'); ?></h2>
             	<p><?php the_time('Y'); ?></p>
