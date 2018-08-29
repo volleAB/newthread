@@ -1,0 +1,63 @@
+section.contact > main section > main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 72px;
+  padding: 0 32px;
+}
+section.contact > main section > main .one {
+  flex: 0 1 30%;
+}
+section.contact > main section > main .one p {
+  font-size: 14px;
+}
+section.contact > main section > main .one p svg {
+  height: 24px;
+}
+section.contact > main section > main .two {
+  flex: 0 1 10%;
+}
+section.contact > main section > main .two p {
+  font-size: 14px;
+}
+section.contact > main section > main .two p img {
+  width: 85px;
+  margin-bottom: 24px;
+}
+section.contact > main section > main .three {
+  flex: 0 1 50%;
+  padding-left: 16px;
+}
+section.contact > main section > main .three form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+section.contact > main section > main .three form input[type="text"] {
+  width: 100%;
+  margin: 6px 0;
+  border: none;
+  border-bottom: 1px solid #999;
+  line-height: 2.5;
+  text-indent: 4px;
+  outline: none;
+}
+section.contact > main section > main .three form textarea {
+  width: 100%;
+  margin: 16px 0;
+  outline: none;
+}
+section.contact > main section > main .three form input[type="submit"] {
+  align-self: flex-end;
+  border: none;
+  padding: 4px 32px;
+  background-color: #8dcac3;
+  color: #fff;
+  line-height: 1.75;
+  font-size: 17px;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+}

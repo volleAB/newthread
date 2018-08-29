@@ -1,0 +1,109 @@
+/**
+*团队招新。less
+2018.8.15
+by fig
+*/
+section.recruit > main section.one main .btn {
+  display: inline-block;
+  padding: 0 16px;
+  margin-left: 32px;
+  background-color: #8dcac3;
+  border-radius: 50px;
+  box-shadow: 0 0 12px #aaa;
+}
+section.recruit > main section.one main .btn a {
+  line-height: 2.5;
+  color: #fff;
+}
+section.recruit > main section.two main .img-box {
+  margin: 48px auto 0 auto;
+  width: 90%;
+}
+section.recruit > main section.two main .img-box img {
+  width: 100%;
+}
+section.recruit > main section.three main {
+  overflow: hidden;
+}
+section.recruit > main section.three main .btn-box {
+  margin-bottom: 16px;
+  text-align: center;
+}
+section.recruit > main section.three main .btn-box span {
+  display: inline-block;
+  margin: 0 4px;
+  width: 40px;
+  text-align: center;
+  font-size: 32px;
+  color: #eee;
+  background-color: #8dcac3;
+  cursor: pointer;
+}
+section.recruit > main section.three main .page-box {
+  width: 100%;
+  margin: 24px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+section.recruit > main section.three main .page-box[isHide="true"] {
+  display: none;
+}
+section.recruit > main section.three main .page-box .box {
+  flex: 0 1 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.recruit > main section.three main .page-box .box:nth-child(even) {
+  align-self: flex-end;
+}
+section.recruit > main section.three main .page-box .box:nth-child(even) p {
+  margin-top: 72px;
+}
+section.recruit > main section.three main .page-box .box:nth-child(even) .img-box {
+  order: 1;
+}
+section.recruit > main section.three main .page-box .box:nth-child(even) .img-box img {
+  margin: -5% 0 0 5%;
+}
+section.recruit > main section.three main .page-box .box p {
+  width: 100%;
+  margin: 36px 0;
+  text-align: center;
+}
+section.recruit > main section.three main .page-box .box .img-box {
+  height: 300px;
+  border: 1px solid #8dcac3;
+}
+section.recruit > main section.three main .page-box .box .img-box img {
+  width: 90%;
+  margin: 10% 0 0 5%;
+}
+section.recruit > main section.three main .page-box[animation="out"] {
+  animation: postListOut 0.6s;
+}
+section.recruit > main section.three main .page-box[animation="in"] {
+  animation: postListIn 0.5s;
+}
+@keyframes postListOut {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(110%, 0) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes postListIn {
+  0% {
+    transform: translate(-100%, 0) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,397 @@
+/**
+ * 首页.css->page-home.php
+ *
+ * 2018.7.20
+ * by fig
+ * v1.0.0
+ */
+
+section.home {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+section.home .carousel {
+    width: 100%;
+    height: 100vh;
+}
+
+section.home .carousel .img-box {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+section.home .carousel .img-box div {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+section.home .carousel .img-box div img {
+    width: 100%;
+    height: 100%;
+}
+
+section.home .carousel .btn-box {
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+section.home .carousel .btn-box .dot-box {
+    position: absolute;
+    bottom: 10%;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 8px 4px;
+    border-radius: 50% 15%;
+}
+
+section.home .carousel .btn-box .dot-box:hover {
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
+section.home .carousel .btn-box .dot-box span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+}
+
+section.home .carousel .btn-box .dot-box span.on::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.5px 0 0 -2.5px;
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+section.home .carousel .btn-box .text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    margin-top: -15vh;
+    text-align: center;
+    color: #fefefe;
+}
+
+section.home .carousel .btn-box .text P {
+    margin: 0;
+}
+
+section.home .carousel .btn-box .text .h0 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+section.home .carousel .btn-box .text .h2 {
+    font-size: 24px;
+}
+
+section.home-1 .carousel-1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 46px;
+    /* z-index: 1; */
+}
+
+section.home-1 .carousel-1 .text {
+    position: relative;
+    /* z-index: 1; */
+    left: 0;
+    width: 100%;
+    height: 120px;
+    margin-top: 0;
+    text-align: right;
+    padding-right: 220px;
+}
+
+section.home-1 .carousel-1 .text P {
+    margin: 0;
+}
+
+section.home-1 .carousel-1 .text .h0 {
+    color: #736550;
+    font-size: 16px;
+    font-style: italic;
+}
+
+section.home-1 .carousel-1 .text .h1 {
+    margin-left: 12px;
+    font-size: 26px;
+    line-height: 5;
+    border-right: 14px solid #f1e8dc;
+    padding-right: 18px;
+}
+
+section.home-1 .carousel-2 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 26px;
+}
+
+section.home-1 .carousel-2 .line {
+    position: absolute;
+    border: 1px solid #dfcbae;
+    width: 736px;
+    height: 490px;
+    margin-left: 152px;
+    /* z-index: -1; */
+}
+
+section.home-1 .carousel-2 .image {
+    position: absolute;
+    /* z-index: 1; */
+    margin-left: 172px;
+    margin-top: 22px;
+}
+
+section.home-1 .carousel-2 .text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 8px 4px;
+    margin-right: 220px;
+}
+
+section.home-1 .carousel-2 .text .h0 {
+    width: 330px;
+    text-align: left;
+    margin-top: 100px;
+    margin-right: -44px;
+    font-size: 46px;
+    line-height: 2;
+}
+
+section.home-1 .carousel-2 .text .h1 {
+    width: 200px;
+    margin-top: -20px;
+    font-size: 12px;
+    text-align: justify;
+    margin-right: 60px;
+}
+
+section.home-1 .carousel-2 .line-1 {
+    position: relative;
+    /* z-index: 1; */
+    border: 1px solid #dfcbae;
+    width: 1171px;
+    margin-top: 180px;
+    margin-left: 152px;
+    margin-right: 152px;
+}
+
+section.home-1 .carousel-3 .text .h0 {
+    margin-left: 152px;
+    font-size: 26px;
+    line-height: 5;
+    border-left: 14px solid #f1e8dc;
+    padding-left: 18px;
+}
+
+section.home-1 .carousel-3 .text .h1 {
+    color: #736550;
+    font-size: 16px;
+    font-style: italic;
+}
+
+section.home-1 .carousel-3 .case {
+    position: relative;
+    /* z-index: -1; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 1171px;
+    height: 622px;
+    margin-left: 152px;
+}
+
+section.home-1 .carousel-3 .case .c1 {
+    box-shadow: 2px 2px 2px 2px #f2f2f2;
+    border: 1px solid #f1e8dc;
+    width: 370px;
+    height: 300px;
+}
+
+section.home-1 .carousel-3 .case .c1 .i1 {
+    position: absolute;
+    /* z-index: 1; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+section.home-1 .carousel-3 .case .c1 .text1 {
+    position: relative;
+    /* z-index: 1; */
+    margin-top: 190px;
+    text-align: justify;
+    padding-left: 26px;
+    padding-right: 20px;
+}
+
+section.home-1 .carousel-3 .case .c1 .text1 .t0 {
+    font-weight: 550;
+    font-size: 21px;
+}
+
+section.home-1 .carousel-3 .case .c1 .text1 .t1 {
+    color: #a0a0a0;
+    font-size: 12px;
+    padding-top: 12px;
+}
+
+section.home-1 .carousel-3 .case .c1 .text1 .t2 {
+    color: #a0a0a0;
+    font-size: 12px;
+    padding-top: 12px;
+}
+
+section.home-1 .carousel-4 .text {
+    text-align: center;
+    margin-top: 142px;
+}
+
+section.home-1 .carousel-4 .text {
+    text-align: center;
+    margin-top: 142px;
+}
+
+section.home-1 .carousel-4 .text .h0 {
+    font-size: 26px;
+    vertical-align: middle;
+    padding-right: 48px;
+    padding-left: 48px;
+}
+
+section.home-1 .carousel-4 .text .line {
+    display: inline-block;
+    width: 77px;
+    border-top: 1px solid #dfcbae;
+}
+
+section.home-1 .carousel-4 .text .h1 {
+    color: #736550;
+    font-size: 16px;
+    font-style: italic;
+}
+
+section.home-1 .carousel-4 .case {
+    margin-top: 80px;
+    width: 1174px;
+    height: 465px;
+    margin-bottom: 150px;
+    margin-left: 152px;
+    position: relative;
+    /* z-index: -1; */
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section.home-1 .carousel-4 .case .c1 {
+    border: 1px solid #cccccc;
+    width: 257px;
+    height: 320px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+section.home-1 .carousel-4 .case .c1 .g1 {
+    margin-left: 78px;
+}
+
+section.home-1 .carousel-4 .case .c2 {
+    border: 1px solid #cccccc;
+    width: 257px;
+    height: 320px;
+    margin-top: 144px;
+    margin-left: 28px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+section.home-1 .carousel-4 .case .c2 .g2 {
+    margin-left: 78px;
+}
+
+section.home-1 .carousel-4 .case .c3 {
+    border: 1px solid #cccccc;
+    width: 257px;
+    height: 320px;
+    margin-left: 28px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+section.home-1 .carousel-4 .case .c3 .g3 {
+    margin-left: 78px;
+}
+
+section.home-1 .carousel-4 .case .c4 {
+    border: 1px solid #cccccc;
+    width: 257px;
+    height: 320px;
+    margin-top: 144px;
+    margin-left: 28px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+section.home-1 .carousel-4 .case .c4 .g4 {
+    margin-left: 78px;
+}
+
+section.home-1 .carousel-4 .case .c5 .up {
+    color: #e4dacc;
+    width: 40px;
+    height: 40px;
+    background-color: #af9166;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 204px;
+    margin-left: 22px;
+}
+
+section.home-1 .carousel-4 .case .c5 .down {
+    color: #e4dacc;
+    width: 40px;
+    height: 40px;
+    background-color: #af9166;
+    font-size: 26px;
+    text-align: center;
+    margin-top: -24px;
+    margin-left: 22px;
+}

@@ -1,0 +1,405 @@
+/**
+*新闻中心。less
+2018.8.2
+by fig
+*/
+section.news main > section .content .page-box[animation="out"] {
+  animation: postListOut 0.6s;
+}
+section.news main > section .content .page-box[animation="in"] {
+  animation: postListIn 0.5s;
+}
+@keyframes postListOut {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(110%, 0) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes postListIn {
+  0% {
+    transform: translate(-100%, 0) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+section.news main > section.one .content {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+section.news main > section.one .content .box {
+  flex: 0 1 24.8%;
+  height: 100%;
+  padding: 12px 12px 0 12px;
+  background-color: #57a0b1;
+  border-radius: 2px;
+  overflow: hidden;
+}
+section.news main > section.one .content .box:nth-child(even) {
+  background-color: #8dcac3;
+}
+section.news main > section.one .content .box .img-box {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background-color: #a0d3cd;
+}
+section.news main > section.one .content .box .img-box img {
+  width: 100%;
+}
+section.news main > section.one .content .box .time {
+  font-size: 10px;
+  color: #eee;
+}
+section.news main > section.one .content .box h3 {
+  color: #eee;
+  line-height: 2;
+  margin: 0;
+  margin-bottom: 32px;
+}
+section.news main > section.one .content .box a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #eee;
+  margin: 0 40% -6px 40%;
+  padding: 0;
+  position: relative;
+}
+section.news main > section.one .content .box a::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 0;
+  border-top: 4px solid #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -2px 0 0 -7px;
+}
+section.news main > section.one .content .box a::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 14px;
+  border-left: 4px solid #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -7px 0 0 -2px;
+}
+section.news main > section.two .content {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section.news main > section.two .content .box {
+  flex: 0 1 48%;
+  height: 150px;
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #999;
+}
+section.news main > section.two .content .box .img-box {
+  flex: 0 1 20%;
+  height: 75%;
+  margin-bottom: -32px;
+  overflow: hidden;
+  background-color: rgba(160, 211, 205, 0.624);
+  display: flex;
+  align-items: center;
+}
+section.news main > section.two .content .box .img-box img {
+  width: 100%;
+}
+section.news main > section.two .content .box .txt-box {
+  flex: 0 1 75%;
+  height: 100%;
+  padding: 0 16px;
+}
+section.news main > section.two .content .box > a {
+  flex: 0 1 5%;
+  align-self: flex-end;
+}
+section.news main > section.two .content .box > a span {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: #57a0b1;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+  color: #eee;
+}
+section.news main > section.two .content .box > a:hover {
+  color: #eee;
+}
+section.news main > section.three .content {
+  overflow: hidden;
+}
+section.news main > section.three .content .btn-box {
+  margin-bottom: 16px;
+  text-align: end;
+}
+section.news main > section.three .content .btn-box span {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+  font-size: 20px;
+  color: #eee;
+  background-color: #8dcac3;
+  cursor: pointer;
+}
+section.news main > section.three .content .page-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section.news main > section.three .content .page-box[isHide="true"] {
+  display: none;
+}
+section.news main > section.three .content .page-box .box {
+  flex: 0 1 23%;
+  border: 1px solid #8dcac3;
+  border-bottom: 4px solid #8dcac3;
+  border-radius: 2px;
+  position: relative;
+}
+section.news main > section.three .content .page-box .box .img-box {
+  width: 100%;
+  height: 200px;
+  background-color: #efefef;
+  overflow: hidden;
+}
+section.news main > section.three .content .page-box .box .img-box img {
+  width: 100%;
+}
+section.news main > section.three .content .page-box .box .txt-box {
+  padding-bottom: 8px;
+  text-align: center;
+  line-height: 2;
+}
+section.news main > section.three .content .page-box .box .txt-box h3 {
+  margin: 0;
+}
+section.news main > section.three .content .page-box .box .txt-box .time {
+  font-size: 12px;
+  color: #333;
+  margin: 0;
+}
+section.news main > section.three .content .page-box .box .txt-box:hover {
+  background-color: #8dcac3;
+}
+section.news main > section.three .content .page-box .box a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  background-color: #8dcac3;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+section.news main > section.three .content .page-box .box a::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 0;
+  border-top: 2px solid #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1px 0 0 -7px;
+}
+section.news main > section.three .content .page-box .box a::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 14px;
+  border-left: 2px solid #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -7px 0 0 -1px;
+}
+section.news main > section.four .content {
+  overflow: hidden;
+}
+section.news main > section.four .content .btn-box {
+  margin-bottom: 16px;
+  text-align: center;
+}
+section.news main > section.four .content .btn-box span {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+  font-size: 20px;
+  color: #eee;
+  background-color: #8dcac3;
+  cursor: pointer;
+}
+section.news main > section.four .content .page-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+section.news main > section.four .content .page-box[isHide="true"] {
+  display: none;
+}
+section.news main > section.four .content .page-box .box {
+  flex: 0 1 31%;
+  height: 56px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+section.news main > section.four .content .page-box .box .img-box {
+  width: 16px;
+  height: 28px;
+  margin: 0 8px;
+  background-color: #8dcac3;
+  position: relative;
+}
+section.news main > section.four .content .page-box .box .img-box::after {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid rgba(51, 51, 51, 0);
+  border-bottom: 8px solid #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+section.news main > section.four .content .page-box .box .txt-box h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+}
+section.news main > section.five {
+  position: relative;
+}
+section.news main > section.five #backTop {
+  width: 40px;
+  height: 40px;
+  background-color: #57a0b1;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 600;
+  color: #fff;
+  transform: rotate(-90deg);
+  position: absolute;
+  bottom: 20%;
+  left: 100%;
+  cursor: pointer;
+}
+section.news main > section.five .content {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+section.news main > section.five .content .page-box {
+  width: 100%;
+  display: flex;
+  padding-top: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+section.news main > section.five .content .page-box[isHide="true"] {
+  display: none;
+}
+section.news main > section.five .content .page-box .box {
+  flex: 0 1 31%;
+  min-height: 260px;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  transition: all .25s;
+}
+section.news main > section.five .content .page-box .box:hover {
+  background-color: #57a0b1;
+  color: #fff;
+}
+section.news main > section.five .content .page-box .box:hover .top {
+  background-color: #fefefe;
+  color: #000;
+}
+section.news main > section.five .content .page-box .box:hover .txt-box p {
+  color: #fff;
+}
+section.news main > section.five .content .page-box .box .top {
+  width: 30%;
+  margin-top: -30px;
+  padding-right: 4px;
+  padding-top: 24px;
+  height: 85px;
+  background-color: #57a0b1;
+  border: 1px solid #57a0b1;
+  border-radius: 2px;
+  text-align: end;
+  color: #fff;
+}
+section.news main > section.five .content .page-box .box .top .time-1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+section.news main > section.five .content .page-box .box .top .time-2 {
+  font-size: 12px;
+}
+section.news main > section.five .content .page-box .box .txt-box p {
+  text-indent: 32px;
+  color: #666;
+}
+section.news main > section.five .content .dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.news main > section.five .content .dots #previous,
+section.news main > section.five .content .dots #next {
+  cursor: pointer;
+}
+section.news main > section.five .content .dots .dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 12px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+section.news main > section.five .content .dots .dot[isHide="false"]::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2px;
+  margin-left: -2px;
+}

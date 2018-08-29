@@ -1,0 +1,346 @@
+/**
+*荣誉成果.css
+*2018.7.27
+*by fig
+*/
+section.honor main {
+  perspective: 1200px;
+}
+section.honor main section {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform-origin: 50% 100%;
+}
+section.honor main section[isHide="true"] {
+  display: none;
+}
+section.honor main section[animation="out"] {
+  animation: pageOut 1s;
+}
+section.honor main section[animation="in"] {
+  animation: pageIn .75s;
+}
+@keyframes pageOut {
+  0% {
+    transform: rotateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(180deg) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes pageIn {
+  0% {
+    transform: rotateY(270deg) scale(0);
+  }
+  100% {
+    transform: rotateY(360deg) scale(1);
+  }
+}
+section.honor main section.one .content,
+section.honor main section.three .content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+section.honor main section.one .content ul,
+section.honor main section.three .content ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+section.honor main section.one .content ul li,
+section.honor main section.three .content ul li {
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid #aaa;
+}
+section.honor main section.one .content ul li:last-child,
+section.honor main section.three .content ul li:last-child {
+  border: none;
+}
+section.honor main section.one .content ul li div,
+section.honor main section.three .content ul li div {
+  width: 260px;
+  min-height: 80px;
+  padding: 16px 24px;
+  border-radius: 2px;
+}
+section.honor main section.one .content ul li:hover div,
+section.honor main section.three .content ul li:hover div,
+section.honor main section.one .content ul li[isON="true"] div,
+section.honor main section.three .content ul li[isON="true"] div {
+  background-color: #ddf6f3;
+  box-shadow: 0 0 6px #eee;
+}
+section.honor main section.one .content ul li:first-child,
+section.honor main section.three .content ul li:first-child {
+  margin-top: 0;
+}
+section.honor main section.one .content ul li h3,
+section.honor main section.three .content ul li h3 {
+  margin: 0;
+  line-height: 1.5;
+  color: #57a0b1;
+  font-weight: 400;
+}
+section.honor main section.one .content .post-box,
+section.honor main section.three .content .post-box {
+  border: 1px solid #a18d70;
+  border-radius: 2px;
+  margin: 16px 0 0 32px;
+}
+section.honor main section.one .content .post-box .post,
+section.honor main section.three .content .post-box .post {
+  min-height: 100vh;
+  min-width: 40vw;
+  display: none;
+}
+section.honor main section.one .content .post-box .post[animation="out"],
+section.honor main section.three .content .post-box .post[animation="out"] {
+  animation: postOut 0.55s;
+}
+section.honor main section.one .content .post-box .post[animation="in"],
+section.honor main section.three .content .post-box .post[animation="in"] {
+  animation: postIn .75s;
+}
+@keyframes postOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes postIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+section.honor main section.one .content .post-box .post[isOn="true"],
+section.honor main section.three .content .post-box .post[isOn="true"] {
+  display: inline-block;
+}
+section.honor main section.one .content .post-box .post > .txt-box,
+section.honor main section.three .content .post-box .post > .txt-box {
+  margin-top: 32px;
+  padding: 0 24px 0 32px;
+}
+section.honor main section.one .content .post-box .post > .txt-box h2,
+section.honor main section.three .content .post-box .post > .txt-box h2 {
+  font-size: 32px;
+  display: inline;
+  padding-bottom: 4px;
+  color: #57a0b1;
+}
+section.honor main section.one .content .post-box .post > .txt-box .cont,
+section.honor main section.three .content .post-box .post > .txt-box .cont {
+  margin: 48px 0 64px 0;
+}
+section.honor main section.one .content .post-box .post > .txt-box .cont p,
+section.honor main section.three .content .post-box .post > .txt-box .cont p {
+  text-indent: 32px;
+  font-size: 15px;
+  color: #333;
+}
+section.honor main section.two .content {
+  padding: 32px 16px;
+  overflow: hidden;
+}
+section.honor main section.two .content .postList {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+section.honor main section.two .content .postList[isHide="true"] {
+  display: none;
+}
+section.honor main section.two .content .postList[animation="out"] {
+  animation: postListOut 0.6s;
+}
+section.honor main section.two .content .postList[animation="in"] {
+  animation: postListIn 0.5s;
+}
+@keyframes postListOut {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(110%, 0) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes postListIn {
+  0% {
+    transform: translate(-100%, 0) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+section.honor main section.two .content .postList .box {
+  flex: 0 0 30%;
+  min-height: 260px;
+  margin: 0 1.665% 48px 1.665%;
+  border: 1px solid #ccc;
+  border-top: 4px solid #57a0b1;
+  border-radius: 2px;
+  box-shadow: 1px 1px 6px #ddd;
+}
+section.honor main section.two .content .postList .box .top {
+  background-color: #ddf6f3;
+  padding: 8px 16px;
+}
+section.honor main section.two .content .postList .box .top h3 {
+  margin: 0;
+  line-height: 1.75;
+}
+section.honor main section.two .content .postList .box .top .time {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+section.honor main section.two .content .postList .box p {
+  text-indent: 32px;
+  padding: 4px 12px;
+  margin-top: 32px;
+}
+section.honor main section.two .content .dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+section.honor main section.two .content .dots .dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 12px;
+  padding: 0;
+  border: 1px solid #666;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+section.honor main section.two .content .dots .dot::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #666;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -2px 0 0 -2px;
+}
+section.honor main section.two .content .dots .dot[isHide="true"]::before {
+  display: none;
+}
+section.honor main section.two .content .dots div {
+  margin: 0 12px;
+  cursor: pointer;
+}
+section.honor main section.three .content .post {
+  padding: 32px 32px 16px 48px;
+}
+section.honor main section.three .content .post h2 {
+  color: #57a0b1;
+}
+section.honor main section.three .content .post .box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.honor main section.three .content .post .box .img-box {
+  flex: 0 1 35%;
+}
+section.honor main section.three .content .post .box .img-box img {
+  width: 100%;
+}
+section.honor main section.three .content .post .box .txt-box {
+  flex: 0 1 60%;
+}
+section.honor main section.three .content .post .box .txt-box .info p {
+  font-size: 14px;
+}
+section.honor main section.three .content .post .box .txt-box .hr {
+  width: 48px;
+  height: 0;
+  border-top: 4px solid #57a0b1;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+section.honor main section.three .content .post .box .txt-box .cont p {
+  text-indent: 32px;
+}
+section.honor main section.four .content {
+  width: 100%;
+}
+section.honor main section.four .content .box {
+  width: 100%;
+  margin: 8px 0;
+  padding: 48px 16px;
+  border-top: 2px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+section.honor main section.four .content .box:first-child {
+  border: none;
+}
+section.honor main section.four .content .box:nth-child(even) .img-box {
+  order: 2;
+}
+section.honor main section.four .content .box:nth-child(even) .txt-box {
+  order: 1;
+  text-align: end;
+}
+section.honor main section.four .content .box:nth-child(even) .txt-box .cont {
+  text-align: start;
+}
+section.honor main section.four .content .box .img-box {
+  height: 350px;
+  flex: 0 1 35%;
+  overflow: hidden;
+}
+section.honor main section.four .content .box .img-box img {
+  width: 100%;
+}
+section.honor main section.four .content .box .txt-box {
+  flex: 0 1 55%;
+}
+section.honor main section.four .content .box .txt-box h2 {
+  margin: 0;
+  line-height: 1.75;
+  color: #57a0b1;
+}
+section.honor main section.four .content .box .txt-box .excerpt {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.75;
+  color: #999;
+}
+section.honor main section.four .content .box .txt-box .cont {
+  margin-top: 48px;
+}
+section.honor main section.four .content .box .txt-box .cont p {
+  text-indent: 32px;
+}
