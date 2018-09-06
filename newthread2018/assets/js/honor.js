@@ -79,7 +79,7 @@ function changePage(num = "one", bool = false) {
         list = {
             "one": "科研项目",
             "two": "创新比赛",
-            "three": "软件专利",
+            "three": "知识产权",
             "four": "优秀学生"
         };
 

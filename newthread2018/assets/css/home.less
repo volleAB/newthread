@@ -1,0 +1,373 @@
+/**
+ * 首页.css->page-home.php 
+ * 
+ * 2018.7.20
+ * by fig
+ * v1.0.0
+ */
+@import "font-size.less";
+section.home {
+    width: 100%;
+    position: relative;
+    .carousel {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+        .carousel-img-box {
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            div {
+                width: 100%;
+                height: 100vh;
+                padding: 0;
+                margin: 0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .btn-box {
+            z-index: 1;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            .dot-box {
+                position: absolute;
+                bottom: 10%;
+                right: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                flex-direction: column;
+                padding: 8px 4px;
+                border-radius: 50% 15%;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.199);
+                }
+                span {
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    margin: 6px;
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                    position: relative;
+                    &.on::after {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin: -2.5px 0 0 -2.5px;
+                        content: "";
+                        display: inline-block;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: #ccc;
+                    }
+                }
+            }
+            .text {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                height: 30vh;
+                margin-top: -15vh;
+                text-align: center;
+                color: #fefefe;
+                P {
+                    margin: 0;
+                }
+                .h0 {
+                    font-size: 64px;
+                    font-weight: 600;
+                    line-height: 2;
+                }
+                .h2 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    background-color: #fff;
+    main {
+        section {
+            &.one {
+                width: 100%;
+                .title {
+                    border-left: none;
+                    border-right: 8px solid #8dcac3;
+                    text-align: right;
+                }
+                .content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .img-box {
+                        flex: 0 1 65%;
+                        border: 1px solid #8dcac3;
+                        img {
+                            width: 100%;
+                            margin: 16px 0 -16px 16px;
+                        }
+                    }
+                    .txt-box {
+                        flex: 0 1 30%;
+                        img {
+                            display: none;
+                        }
+                        h2 {
+                            .h0;
+                        }
+                        p,
+                        .p {
+                            text-indent: 32px;
+                            .h6;
+                            
+                        }
+                    }
+                }
+            }
+            &.two {
+                overflow: hidden;
+                width: 100%;
+                .page-box {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    &[isHide="true"] {
+                        display: none;
+                    }
+                    &[animation="out"] {
+                        animation: postListOut 0.6s
+                    }
+                    &[animation="in"] {
+                        animation: postListIn 0.5s
+                    }
+                    @keyframes postListOut {
+                        0% {
+                            transform: translate(0, 0) scale(1);
+                            opacity: 1;
+                        }
+                        100% {
+                            transform: translate(110%, 0) scale(0);
+                            opacity: 0;
+                        }
+                    }
+                    @keyframes postListIn {
+                        0% {
+                            transform: translate(-100%, 0) scale(0);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translate(0, 0) scale(1);
+                            opacity: 1;
+                        }
+                    }
+                    .box {
+                        flex: 0 1 31.5%;
+                        padding: 16px 16px 8px 16px;
+                        margin: 12px 0;
+                        min-height: 345px;
+                        box-shadow: 0 0 8px #ccc;
+                        .img-box {
+                            width: 100%;
+                            height: 125px;
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .txt-box {
+                            p,
+                            .p {
+                                font-size: 13px;
+                                color: #333;
+                                line-height: 1.5;
+                            }
+                            .time {
+                                font-size: 12px;
+                                color: #666;
+                            }
+                        }
+                    }
+                }
+                .dots {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    #previous,
+                    #next {
+                        cursor: pointer;
+                    }
+                    .dot-two {
+                        width: 12px;
+                        height: 12px;
+                        margin: 0 12px;
+                        border: 1px solid #333;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            background-color: #333;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            margin-top: -2px;
+                            margin-left: -2px;
+                        }
+                        &[isHide="true"]::after {
+                            // content: "";
+                            overflow: hidden;
+                            width: 0;
+                            height: 0;
+                            min-width: 0;
+                            min-height: 0;
+                            opacity: 0;
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            z-index: -999;
+                            // display: none;
+                        }
+                    }
+                }
+            }
+            // &.three {
+            //     .title-three {
+            //         text-align: center;
+            //         margin-bottom: 64px;
+            //         h2 {
+            //             font-size: 32px;
+            //             font-weight: 500;
+            //             position: relative;
+            //             &::before {
+            //                 content: "";
+            //                 display: inline-block;
+            //                 width: 64px;
+            //                 height: 0;
+            //                 border-top: 1px solid #8dcac3;
+            //                 position: absolute;
+            //                 top: 56%;
+            //                 right: 60%;
+            //             }
+            //             &::after {
+            //                 content: "";
+            //                 display: inline-block;
+            //                 width: 64px;
+            //                 height: 0;
+            //                 border-top: 1px solid #8dcac3;
+            //                 position: absolute;
+            //                 top: 55%;
+            //                 left: 60%;
+            //             }
+            //         }
+            //         p,
+            //         .p {
+            //             color: #736550;
+            //         }
+            //     }
+            //     main {
+            //         overflow: hidden;
+            //         .btn-box {
+            //             margin-bottom: 16px;
+            //             text-align: center;
+            //             span {
+            //                 display: inline-block;
+            //                 margin: 0 4px;
+            //                 width: 40px;
+            //                 text-align: center;
+            //                 font-size: 32px;
+            //                 color: #eee;
+            //                 background-color: #8dcac3;
+            //                 cursor: pointer;
+            //             }
+            //         }
+            //         .page-box {
+            //             width: 100%;
+            //             margin: 24px 0;
+            //             display: flex;
+            //             align-items: flex-start;
+            //             justify-content: space-between;
+            //             &[isHide="true"] {
+            //                 display: none;
+            //             }
+            //             .box {
+            //                 flex: 0 1 23%;
+            //                 display: flex;
+            //                 flex-direction: column;
+            //                 justify-content: center;
+            //                 align-items: flex-start;
+            //                 &:nth-child(even) {
+            //                     align-self: flex-end;
+            //                     p,
+            //                     .p {
+            //                         margin-top: 72px;
+            //                     }
+            //                     .img-box {
+            //                         order: 1;
+            //                         img {
+            //                             margin: -5% 0 0 5%;
+            //                         }
+            //                     }
+            //                 }
+            //                 p,
+            //                 .p {
+            //                     width: 100%;
+            //                     margin: 36px 0;
+            //                     text-align: center;
+            //                 }
+            //                 .img-box {
+            //                     height: 300px;
+            //                     border: 1px solid #8dcac3;
+            //                     img {
+            //                         width: 90%;
+            //                         margin: 10% 0 0 5%;
+            //                     }
+            //                 }
+            //             }
+            //             &[animation="out"] {
+            //                 animation: postListOut 0.6s
+            //             }
+            //             &[animation="in"] {
+            //                 animation: postListIn 0.5s
+            //             }
+            //             @keyframes postListOut {
+            //                 0% {
+            //                     transform: translate(0, 0) scale(1);
+            //                     opacity: 1;
+            //                 }
+            //                 100% {
+            //                     transform: translate(110%, 0) scale(0);
+            //                     opacity: 0;
+            //                 }
+            //             }
+            //             @keyframes postListIn {
+            //                 0% {
+            //                     transform: translate(-100%, 0) scale(0);
+            //                     opacity: 0;
+            //                 }
+            //                 100% {
+            //                     transform: translate(0, 0) scale(1);
+            //                     opacity: 1;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+        }
+    }
+}

@@ -5,6 +5,30 @@
 *by fig
 *v1.3.0
 */
+.h0 {
+  font-size: 32px;
+}
+.h1 {
+  font-size: 24px;
+}
+.h2 {
+  font-size: 20px;
+}
+.h3 {
+  font-size: 18px;
+}
+.h4 {
+  font-size: 16px;
+}
+.h5 {
+  font-size: 14px;
+}
+.h6 {
+  font-size: 13px;
+}
+.h7 {
+  font-size: 12px;
+}
 * {
   box-sizing: border-box;
 }
@@ -137,8 +161,15 @@ nav.nav .menu > li:hover::after {
   transform: rotateY(0deg) rotateZ(0deg);
 }
 nav.nav .menu > li:first-child::after,
+nav.nav .menu > li:nth-child(5)::after,
 nav.nav .menu > li:nth-child(6)::after,
 nav.nav .menu > li:nth-child(7)::after {
+  display: none;
+}
+nav.nav .menu > li:first-child:hover > ul,
+nav.nav .menu > li:nth-child(5):hover > ul,
+nav.nav .menu > li:nth-child(6):hover > ul,
+nav.nav .menu > li:nth-child(7):hover > ul {
   display: none;
 }
 nav.nav .menu > li:hover > ul {
@@ -196,8 +227,8 @@ nav.nav .menu > li > ul::before {
   justify-content: space-around;
   align-items: center;
   justify-content: flex-end;
-  width: 100%;
-  padding: 0 15%;
+  width: 1500px;
+  padding-right: 250px;
   background-color: rgba(255, 255, 255, 0);
 }
 .search p {
@@ -221,14 +252,26 @@ nav.nav .menu > li > ul::before {
   border-radius: 3px;
   padding: 4px 8px;
   height: 24px;
+  background-color: rgba(254, 254, 254, 0);
+  transition: background-color 0.5s;
+}
+#searchform .input-box:hover {
   background-color: #fefefe;
+}
+#searchform .input-box:hover input {
+  background-color: #fefefe;
+}
+#searchform .input-box:hover span {
+  color: #999;
 }
 #searchform .input-box span {
   font-size: 16px;
-  color: #999;
+  color: rgba(255, 255, 255, 0);
+  transition: color .5s;
 }
 #searchform .input-box input {
-  background-color: #fefefe;
+  background-color: rgba(254, 254, 254, 0);
+  transition: background-color 0.5s;
   vertical-align: middle;
   display: inline-block;
   padding: 0;
@@ -275,7 +318,7 @@ footer.footer .top .menu {
   align-items: flex-start;
 }
 footer.footer .top .menu > li {
-  height: 175px;
+  height: 155px;
   padding: 0 26px;
   border-left: 1px solid #fafafa;
   border-right: 1px solid #fafafa;
@@ -283,7 +326,7 @@ footer.footer .top .menu > li {
 footer.footer .top .menu > li > a {
   display: inline-block;
   margin: 8px 0 4px 0;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 600;
   color: #ffffff;
 }
@@ -299,7 +342,7 @@ footer.footer .top .menu > li ul > li {
   align-items: center;
 }
 footer.footer .top .menu > li ul > li > a {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: #eee;
 }
@@ -351,18 +394,21 @@ footer.footer .bottom .logo img {
 footer.footer .bottom .copy {
   margin-right: 200px;
 }
-footer.footer .bottom .copy p {
+footer.footer .bottom .copy p,
+footer.footer .bottom .copy .p {
   margin: 0;
   line-height: 2;
 }
 footer.footer .bottom .contact {
   text-align: right;
 }
-footer.footer .bottom .contact p {
+footer.footer .bottom .contact p,
+footer.footer .bottom .contact .p {
   margin: 0;
   line-height: 2;
 }
-footer.footer .bottom .contact p svg {
+footer.footer .bottom .contact p svg,
+footer.footer .bottom .contact .p svg {
   width: 24px;
 }
 section.page-search {
@@ -397,7 +443,7 @@ section.page-search .sous form .input-box input[type="text"] {
   font-size: 24px;
 }
 section.page-search .sous form .input-box input[type="submit"] {
-  border: 1px solid rgba(255, 255, 255, 0.404);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: #59b8e8;
   width: 10%;
   height: 64px;
@@ -452,7 +498,8 @@ section.page-search main section article .txt-box {
 section.page-search main section article .txt-box header h2 {
   margin: 0;
 }
-section.page-search main section article .txt-box .entry-summary p {
+section.page-search main section article .txt-box .entry-summary p,
+section.page-search main section article .txt-box .entry-summary .p {
   font-size: 15px;
   color: #666;
 }
@@ -497,7 +544,8 @@ section.page-search main section section.no-results h1 {
   text-align: center;
   font-size: 32px;
 }
-section.page-search main section section.no-results div p {
+section.page-search main section section.no-results div p,
+section.page-search main section section.no-results div .p {
   text-align: center;
 }
 section.page-search main section section.no-results div form div {
@@ -583,14 +631,17 @@ section.single main section {
   padding: 24px 32px;
   min-height: 90vh;
 }
-section.single main section img {
-  width: 70%;
-  margin: 32px 13%;
-}
-section.single main section p {
+section.single main section p,
+section.single main section .p {
   text-indent: 32px;
 }
-section.single main section .ex p {
+section.single main section p img,
+section.single main section .p img {
+  display: block;
+  margin: 32px auto;
+}
+section.single main section .ex p,
+section.single main section .ex .p {
   background-color: #ddd;
   padding: 24px 32px;
   margin-bottom: 32px;
@@ -634,7 +685,8 @@ section.single .sidebar ul li .txt-box {
 section.single .sidebar ul li .txt-box h3 {
   font-size: 20px;
 }
-section.single .sidebar ul li .txt-box p {
+section.single .sidebar ul li .txt-box p,
+section.single .sidebar ul li .txt-box .p {
   font-size: 14px;
   color: #666;
 }
@@ -654,8 +706,8 @@ section.page-all .backgrund {
 section.page-all .main,
 section.page-all > main {
   width: 70%;
-  min-height: 100vh;
   margin: 0 auto;
+  min-height: 100vh;
   background-color: #fff;
 }
 section.page-all .main header,
@@ -711,7 +763,6 @@ section.page-all > main header .bottom .option {
   align-items: center;
   justify-content: space-around;
   font-size: 15px;
-  cursor: pointer;
 }
 section.page-all .main header .bottom .option svg,
 section.page-all > main header .bottom .option svg {
@@ -743,7 +794,9 @@ section.page-all > main > section .title i {
   font-size: 20px;
 }
 section.page-all .main > section .title p,
-section.page-all > main > section .title p {
+section.page-all > main > section .title p,
+section.page-all .main > section .title .p,
+section.page-all > main > section .title .p {
   display: inline;
 }
 section.page-all .main > section p img,

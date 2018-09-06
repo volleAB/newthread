@@ -10,12 +10,13 @@
  */
 get_header( );?>
 
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ) ?>/assets/css/style-index.css">
+
 <section id="main" class="main">
-    <div>page.php<?php the_title(  ); ?></div>
-    <div>简介</div>
-    <div>最新文章<a href="<?php bloginfo( 'template_url' ); ?>/page-tream.php">111111111</a></div>
-    <div>组别li</div>
+    <h1 style="text-align: center;">
+
+            系统错误，请联系管理员。
+
+        </h1>
 </section>
 
 <?php get_footer( );?>

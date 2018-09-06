@@ -1,0 +1,123 @@
+/**
+*新闻中心。less
+2018.8.2
+by fig
+*/
+.h0 {
+  font-size: 32px;
+}
+.h1 {
+  font-size: 24px;
+}
+.h2 {
+  font-size: 20px;
+}
+.h3 {
+  font-size: 18px;
+}
+.h4 {
+  font-size: 16px;
+}
+.h5 {
+  font-size: 14px;
+}
+.h6 {
+  font-size: 13px;
+}
+.h7 {
+  font-size: 12px;
+}
+section.news main > section.five {
+  position: relative;
+}
+section.news main > section.five #backTop {
+  width: 40px;
+  height: 40px;
+  background-color: #57a0b1;
+  font-size: 14px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 600;
+  color: #fff;
+  transform: rotate(-90deg);
+  position: absolute;
+  bottom: 20%;
+  left: 100%;
+  cursor: pointer;
+}
+section.news main > section.five .content {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+section.news main > section.five .content .page-box {
+  width: 100%;
+  padding-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+section.news main > section.five .content .page-box[isHide="true"] {
+  display: none;
+}
+section.news main > section.five .content .page-box .box {
+  flex: 0 1 31%;
+  min-height: 260px;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  transition: all .25s;
+}
+section.news main > section.five .content .page-box .box:hover {
+  background-color: #57a0b1;
+  color: #fff;
+}
+section.news main > section.five .content .page-box .box:hover .top {
+  background-color: #fefefe;
+  color: #000;
+}
+section.news main > section.five .content .page-box .box:hover .txt-box p,
+section.news main > section.five .content .page-box .box:hover .txt-box .p {
+  color: #fff;
+}
+section.news main > section.five .content .page-box .box .top {
+  width: 30%;
+  margin-top: -30px;
+  padding-right: 4px;
+  padding-top: 24px;
+  height: 85px;
+  background-color: #57a0b1;
+  border: 1px solid #57a0b1;
+  border-radius: 2px;
+  text-align: right;
+  color: #fff;
+}
+section.news main > section.five .content .page-box .box .top .time-1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+section.news main > section.five .content .page-box .box .top .time-2 {
+  font-size: 12px;
+}
+section.news main > section.five .content .page-box .box .txt-box p,
+section.news main > section.five .content .page-box .box .txt-box .p {
+  text-indent: 32px;
+  color: #666;
+}
+section.news main > section.five .content .page-navs {
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+}
+section.news main > section.five .content .page-navs span.current {
+  font-size: 18px;
+  color: #45d0f0;
+}
+section.news main > section.five .content .page-navs a {
+  font-size: 14px;
+}
+section.news main > section.five .content .page-navs > * {
+  margin: 0 4px;
+}

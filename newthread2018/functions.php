@@ -59,9 +59,40 @@ function curPageURL()
     }
     return $pageURL;
 }
+//摘要修改
+function new_excerpt_more($more) {
+global $post;
+return "...";
+// return "<a style=\"color:#0000ff;\" href=". get_permalink($post->ID) . ">更多</a>";
+}
+add_filter("excerpt_more", "new_excerpt_more");
+/*控制摘要字数*/
+function new_excerpt_length($length) {
+return 51;
+}
+add_filter("excerpt_length", "new_excerpt_length");
 
 
-
+function catch_that_image() {
+global $post, $posts;
+$first_img = '';
+ob_start();
+ob_end_clean();
+$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+ 
+//获取文章中第一张图片的路径并输出
+$first_img = $matches[1][0];
+ 
+//如果文章无图片，获取自定义图片
+ 
+if(empty($first_img)){ //Defines a default image
+$first_img =  bloginfo( 'template_url' )."/assets/image/daiti.svg";
+ 
+//请自行设置一张default.jpg图片
+}
+ 
+return $first_img;
+}
 
 function getImgUrl($str=""){
     $url= substr($str,stripos($str,"src=")+5,stripos($str,"alt")-stripos($str,"src=")-7);
@@ -73,7 +104,7 @@ function getImgUrl($str=""){
     
 }
 
-
+//阅读量 
 //postviews   
 function get_post_views ($post_id) {   
   
@@ -111,5 +142,133 @@ function set_post_views () {
   
 }   
 add_action('get_header', 'set_post_views');  
+//阅读量 end
+
+
+//评论 添加字段 
+add_action('wp_insert_comment','wp_insert_tel',10,2);
+function wp_insert_tel($comment_ID,$commmentdata) {
+    
+
+
+    $name= isset($_POST['name']) ? $_POST['name'] : false; 
+    $gender= isset($_POST['gender']) ? $_POST['gender'] : false; 
+    $ethnic= isset($_POST['ethnic']) ? $_POST['ethnic'] : false; 
+    $birthday= isset($_POST['birthday']) ? $_POST['birthday'] : false;
+    $birthplace= isset($_POST['birthplace']) ? $_POST['birthplace'] : false;
+    $college= isset($_POST['college']) ? $_POST['college'] : false;
+    $profession= isset($_POST['profession']) ? $_POST['profession'] : false;
+    $tel = isset($_POST['tel']) ? $_POST['tel'] : false;
+    // $phone= isset($_POST['phone']) ? $_POST['phone'] : false;
+    $qq= isset($_POST['qq']) ? $_POST['qq'] : false;
+    $team= isset($_POST['team']) ? $_POST['team'] : false;
+    $hobby= isset($_POST['hobby']) ? $_POST['hobby'] : false;
+    $reason= isset($_POST['reason']) ? $_POST['reason'] : false;
+
+
+    update_comment_meta($comment_ID,'name',$name);
+    update_comment_meta($comment_ID,'gender',$gender);
+    update_comment_meta($comment_ID,'ethnic',$ethnic);
+    update_comment_meta($comment_ID,'birthday',$birthday);
+    update_comment_meta($comment_ID,'birthplace',$birthplace);
+    update_comment_meta($comment_ID,'college',$college);
+    update_comment_meta($comment_ID,'profession',$profession);
+    update_comment_meta($comment_ID,'tel',$tel);//tel 是存储在数据库里的字段名字
+    // update_comment_meta($comment_ID,'phone',$phone);
+    update_comment_meta($comment_ID,'qq',$qq);
+    update_comment_meta($comment_ID,'team',$team);
+    update_comment_meta($comment_ID,'hobby',$hobby);
+    update_comment_meta($comment_ID,'reason',$reason);
+}
+
+
+add_filter( 'manage_edit-comments_columns', 'my_comments_columns' );
+add_action( 'manage_comments_custom_column', 'output_my_comments_columns', 10, 2 );
+function my_comments_columns( $columns ){
+    $columns[ 'name' ] = __( '姓名' ); 
+    $columns[ 'gender' ] = __( '性别' ); 
+    $columns[ 'ethnic' ] = __( '民族' ); 
+    $columns[ 'birthday' ] = __( '出生年月' ); 
+    $columns[ 'birthplace' ] = __( '籍贯' ); 
+    $columns[ 'college' ] = __( '学院' ); 
+    $columns[ 'profession' ] = __( '年级专业' ); 
+    $columns[ 'tel' ] = __( '电话' );        //电话是代表列的名字
+    $columns[ 'qq' ] = __( 'QQ' ); 
+    $columns[ 'team' ] = __( '小组' ); 
+    $columns[ 'hobby' ] = __( '爱好特长' ); 
+    $columns[ 'reason' ] = __( '理由' ); 
+    return $columns;
+}
+function output_my_comments_columns( $column_name, $comment_id ){
+    switch( $column_name ) {
+        case "name" :
+		echo get_comment_meta( $comment_id, 'name', true );
+        break;
+        case "gender" :
+		echo get_comment_meta( $comment_id, 'gender', true );
+        break;
+        case "ethnic" :
+		echo get_comment_meta( $comment_id, 'ethnic', true );
+        break;
+        case "birthday" :
+		echo get_comment_meta( $comment_id, 'birthday', true );
+        break;
+        case "birthplace" :
+		echo get_comment_meta( $comment_id, 'birthplace', true );
+        break;
+        case "college" :
+		echo get_comment_meta( $comment_id, 'college', true );
+        break;
+        case "profession" :
+		echo get_comment_meta( $comment_id, 'profession', true );
+        break;
+		case "tel" :
+		echo get_comment_meta( $comment_id, 'tel', true );
+        break;
+        case "qq" :
+		echo get_comment_meta( $comment_id, 'qq', true );
+        break;
+        case "team" :
+		echo get_comment_meta( $comment_id, 'team', true );
+        break;
+        case "hobby" :
+		echo get_comment_meta( $comment_id, 'hobby', true );
+        break;
+        case "reason" :
+		echo get_comment_meta( $comment_id, 'reason', true );
+		break;
+		
+	}
+}
+//评论 添加字段  end
+
+
+// 允许重复评论
+function enable_duplicate_comments_preprocess_comment($comment_data)
+{
+    //add some random content to comment to keep dupe checker from finding it
+    $random = md5(time()); 
+    $comment_data['comment_content'] .= "disabledupes{" . $random . "}disabledupes";   
+  
+    return $comment_data;
+}
+add_filter('preprocess_comment', 'enable_duplicate_comments_preprocess_comment');
+  
+function enable_duplicate_comments_comment_post($comment_id)
+{
+    global $wpdb;
+  
+    //remove the random content
+    $comment_content = $wpdb->get_var("SELECT comment_content FROM $wpdb->comments WHERE comment_ID = '$comment_id' LIMIT 1");   
+    $comment_content = preg_replace("/disabledupes\{.*\}disabledupes/", "", $comment_content);
+    $wpdb->query("UPDATE $wpdb->comments SET comment_content = '" . $wpdb->escape($comment_content) . "' WHERE comment_ID = '$comment_id' LIMIT 1");
+  
+    /*
+        add your own dupe checker here if you want
+    */
+}
+add_action('comment_post', 'enable_duplicate_comments_comment_post');
+// 允许重复评论  end
+
 
  ?>

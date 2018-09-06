@@ -6,31 +6,25 @@
 *v1.0.0
 */
 
+@import "font-size.less";
 section.team {
     width: 100%;
     .main {
+        header {
+            .option{
+                cursor: pointer;
+            }
+        }
         section {
-            // padding: 16px 48px 72px 48px;
-            // background-color: rgb(255, 255, 255);
-            // .title {
-            //     margin: 24px 0;
-            //     padding: 2px 16px;
-            //     border-left: 8px solid #ffd81b;
-            //     font-size: 32px;
-            //     i {
-            //         margin-left: 24px;
-            //         font-family: "Myriad Pro";
-            //         color: #736550;
-            //         font-size: 20px;
-            //     }
-            // }
-            // p img {
-            //     display: block;
-            //     margin: 0;
-            //     padding: 0;
-            // }
             &[isHide="true"] {
-                display: none;
+                overflow: hidden;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                margin: 0;
+                padding: 0;
+                border: none;
+                z-index: -999;
             }
             &.one .content {
                 //团队介绍
@@ -44,17 +38,17 @@ section.team {
                     line-height: 1.75;
                 }
             }
-            &.two {
+            &.three {
                 .content {
                     //组织架构
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-around;
-                    h6 {
+                    .the-title {
                         display: inline-block;
                         margin: 32px 0;
-                        font-size: 22px; // font-weight: 500;
+                        .h2;
                         text-align: center;
                         position: relative;
                         &::after {
@@ -76,18 +70,18 @@ section.team {
                             right: 115%;
                         }
                     }
-                    img {
-                        width: 90%;
-                        margin: 16px auto 160px auto;
-                        &:last-child {
-                            margin-bottom: 16px;
+                    .img-box {
+                        width: 65%;
+                        img {
+                            width: 100%;
                         }
                     }
                 }
             }
-            &.three {
+            &.four {
                 .title {
-                    p {
+                    p,
+                    .p {
                         display: inline;
                     }
                 }
@@ -104,6 +98,7 @@ section.team {
                         flex-direction: row;
                         align-items: center;
                         justify-content: flex-start;
+                        z-index: 99;
                         &:nth-child(1) {
                             top: 480px*.3333;
                             margin-left: -245px;
@@ -237,11 +232,11 @@ section.team {
                         }
                     }
                 }
-            }
-            &.four,
-            &.six {
+            } // &.four,
+            &.two {
                 .title {
-                    p {
+                    p,
+                    .p {
                         display: inline;
                     }
                 }
@@ -252,10 +247,13 @@ section.team {
                     align-items: flex-start;
                     justify-content: flex-start;
                     ul {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: flex-start;
+                        min-width: 340px;
+                        height: 110vh;
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
                         li {
                             width: 300px;
                             height: 80px;
@@ -311,7 +309,8 @@ section.team {
                                     font-size: 17px;
                                     line-height: 1.75;
                                 }
-                                p {
+                                p,
+                                .p {
                                     margin: 0;
                                     font-size: 13px;
                                     line-height: 1.75;
@@ -324,8 +323,9 @@ section.team {
                         border-radius: 2px;
                         margin: 16px 0 0 32px;
                         .post {
-                            display: none;
+                            // display: none;
                             min-width: 36vw;
+                            min-height: 80vh;
                             &[animation="out"] {
                                 animation: postOut 0.6s;
                             }
@@ -352,8 +352,17 @@ section.team {
                                     opacity: 1;
                                 }
                             }
-                            &[isOn="true"] {
-                                display: inline-block;
+                            &[isOn="false"] {
+                                overflow: hidden;
+                                width: 0;
+                                height: 0;
+                                min-width: 0;
+                                min-height: 0;
+                                opacity: 0;
+                                margin: 0;
+                                padding: 0;
+                                border: none;
+                                z-index: -999;
                             }
                             .img-box {
                                 width: 50%;
@@ -381,17 +390,22 @@ section.team {
                                     border-bottom: 3px solid #af9166;
                                     padding-bottom: 4px;
                                 }
-                                &>p {
+                                &>p,
+                                .p {
                                     font-size: 14px;
                                     color: #666;
                                 }
                                 .cont {
                                     margin: 48px 0 32px 0;
                                     padding-right: 16px;
-                                    p {
+                                    p,
+                                    .p {
                                         text-indent: 32px;
                                         font-size: 16px;
                                         color: #333;
+                                    }
+                                    img {
+                                        display: none;
                                     }
                                 }
                             }
@@ -409,7 +423,8 @@ section.team {
             }
             &.six {
                 .title {
-                    p {
+                    p,
+                    .p {
                         display: inline;
                     }
                 }

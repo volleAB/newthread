@@ -59,7 +59,8 @@ section.recruit > main section.three main .page-box .box {
 section.recruit > main section.three main .page-box .box:nth-child(even) {
   align-self: flex-end;
 }
-section.recruit > main section.three main .page-box .box:nth-child(even) p {
+section.recruit > main section.three main .page-box .box:nth-child(even) p,
+section.recruit > main section.three main .page-box .box:nth-child(even) .p {
   margin-top: 72px;
 }
 section.recruit > main section.three main .page-box .box:nth-child(even) .img-box {
@@ -68,7 +69,8 @@ section.recruit > main section.three main .page-box .box:nth-child(even) .img-bo
 section.recruit > main section.three main .page-box .box:nth-child(even) .img-box img {
   margin: -5% 0 0 5%;
 }
-section.recruit > main section.three main .page-box .box p {
+section.recruit > main section.three main .page-box .box p,
+section.recruit > main section.three main .page-box .box .p {
   width: 100%;
   margin: 36px 0;
   text-align: center;

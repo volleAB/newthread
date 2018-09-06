@@ -4,11 +4,24 @@
 *by fig
 */
 
+@import "font-size.less";
 section.honor {
     main {
+        header {
+            .option {
+                cursor: pointer;
+            }
+        }
         section {
             &[isHide="true"] {
-                display: none;
+                overflow: hidden;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                margin: 0;
+                padding: 0;
+                border: none;
+                z-index: -999;
             }
             transform-style: preserve-3d;
             backface-visibility: hidden;
@@ -45,10 +58,13 @@ section.honor {
                 align-items: flex-start;
                 justify-content: flex-start;
                 ul {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: flex-start;
+                    min-width: 340px;
+                    height: 110vh;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
                     li {
                         margin: 0;
                         padding: 16px 0;
@@ -84,8 +100,7 @@ section.honor {
                     margin: 16px 0 0 32px;
                     .post {
                         min-height: 100vh;
-                        min-width: 40vw;
-                        display: none;
+                        min-width: 40vw; // display: none;
                         &[animation="out"] {
                             animation: postOut 0.55s;
                         }
@@ -112,8 +127,16 @@ section.honor {
                                 opacity: 1;
                             }
                         }
-                        &[isOn="true"] {
-                            display: inline-block;
+                        &[isOn="false"] {
+                            overflow: hidden;
+                            width: 0;
+                            height: 0;
+                            opacity: 0;
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            z-index: -999;
+                            display: none;
                         }
                         &>.txt-box {
                             margin-top: 32px;
@@ -126,7 +149,8 @@ section.honor {
                             }
                             .cont {
                                 margin: 48px 0 64px 0;
-                                p {
+                                p,
+                                .p {
                                     text-indent: 32px;
                                     font-size: 15px;
                                     color: #333;
@@ -196,13 +220,29 @@ section.honor {
                                 color: #666;
                             }
                         }
-                        p {
+                        p,
+                        .p {
                             text-indent: 32px;
                             padding: 4px 12px;
                             margin-top: 32px;
                         }
                     }
                 }
+                // .page-navs {
+                //     width: 100%;
+                //     padding: 8px 0;
+                //     text-align: center;
+                //     span.current {
+                //         .h3;
+                //         color: #45d0f0;
+                //     }
+                //     a {
+                //         .h5;
+                //     }
+                //     &>* {
+                //         margin: 0 4px;
+                //     }
+                // } 
                 .dots {
                     display: flex;
                     flex-direction: row;
@@ -243,11 +283,12 @@ section.honor {
                     padding: 32px 32px 16px 48px;
                     h2 {
                         color: #57a0b1;
+                        text-align: center;
                     }
                     .box {
                         width: 100%;
-                        display: flex;
-                        justify-content: space-between;
+                        display: flex; // justify-content: space-between;
+                        justify-content: center;
                         align-items: center;
                         .img-box {
                             flex: 0 1 35%;
@@ -257,7 +298,8 @@ section.honor {
                         }
                         .txt-box {
                             flex: 0 1 60%;
-                            .info p {
+                            .info p,
+                            .p {
                                 font-size: 14px;
                             }
                             .hr {
@@ -267,8 +309,12 @@ section.honor {
                                 margin-top: 24px;
                                 margin-bottom: 48px;
                             }
-                            .cont p {
+                            .cont p,
+                            .p {
                                 text-indent: 32px;
+                            }
+                            .cont img {
+                                display: none;
                             }
                         }
                     }
@@ -323,7 +369,11 @@ section.honor {
                         }
                         .cont {
                             margin-top: 48px;
-                            p {
+                            img {
+                                display: none;
+                            }
+                            p,
+                            .p {
                                 text-indent: 32px;
                             }
                         }

@@ -69,7 +69,7 @@ get_header(  );
                         <footer class="entry-footer">
                             <span class="author"><?php the_author();?></span>
                         <span> | </span>
-                        <?php the_date( "Y-m-d", "<span class='time'>","</span>" ) ;?>
+                        <span class='time'><?php echo get_the_date( "Y-m-d" ) ;?></span>
                         </footer>
 
                     </div>

@@ -10,10 +10,12 @@
 get_header( );?>
 
 <section id="main" class="main">
-    <div>index.pfp<?php the_title(  ); ?></div>
-    <div>简介</div>
-    <div>最新文章<a href="<?php bloginfo( 'template_url' ); ?>/page-tream.php">111111111</a></div>
-    <div>组别li</div>
+    
+        <h1 style="text-align: center;">
+
+            系统错误，请联系管理员。
+
+        </h1>
 </section>
 
 <?php get_footer( );?>

@@ -1,0 +1,71 @@
+section.apply section.one table {
+  width: 100%;
+  border-color: #fff;
+}
+section.apply section.one table tr {
+  width: 100%;
+}
+section.apply section.one table tr td {
+  width: 50%;
+  height: 48px;
+}
+section.apply section.one table tr td.w-100 {
+  width: 100%;
+}
+section.apply section.one table tr td label {
+  width: 25%;
+  margin: 0 16px;
+  line-height: 48px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+}
+section.apply section.one table tr td input[type="text"] {
+  width: 75%;
+  height: 100%;
+  border: none;
+  border-left: 1px solid #ccc;
+  outline: none;
+  font-size: 18px;
+  text-indent: 24px;
+}
+section.apply section.one table tr.team .span-box {
+  width: 100%;
+  padding: 16px 72px 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: end;
+}
+section.apply section.one table tr.team .span-box span {
+  flex: 0 1 25%;
+  margin: 4px 0;
+}
+section.apply section.one table tr textarea {
+  width: 95%;
+  border: none;
+  margin: 0 2.5%;
+  outline: none;
+  text-indent: 32px;
+  font-size: 18px;
+}
+section.apply section.one table tr.r textarea {
+  height: 500px;
+}
+section.apply section.one table tr.h textarea {
+  height: 200px;
+}
+section.apply section.one span.submit {
+  display: inline-block;
+  margin: 24px 40% 0 40%;
+  padding: 8px 64px;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0 0 8px #ccc;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background-color: #8dcac3;
+  cursor: pointer;
+}

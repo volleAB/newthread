@@ -5,11 +5,38 @@
 *by fig 
 *v1.0.0
 */
+.h0 {
+  font-size: 32px;
+}
+.h1 {
+  font-size: 24px;
+}
+.h2 {
+  font-size: 20px;
+}
+.h3 {
+  font-size: 18px;
+}
+.h4 {
+  font-size: 16px;
+}
+.h5 {
+  font-size: 14px;
+}
+.h6 {
+  font-size: 13px;
+}
+.h7 {
+  font-size: 12px;
+}
 section.team {
   width: 100%;
 }
 section.team .main {
   perspective: 1200px;
+}
+section.team .main header .option {
+  cursor: pointer;
 }
 section.team .main section {
   transform-style: preserve-3d;
@@ -17,7 +44,14 @@ section.team .main section {
   transform-origin: 50% 100%;
 }
 section.team .main section[isHide="true"] {
-  display: none;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: -999;
 }
 section.team .main section.one .content img {
   width: 70%;
@@ -28,20 +62,20 @@ section.team .main section.one .content P {
   text-indent: 32px;
   line-height: 1.75;
 }
-section.team .main section.two .content {
+section.team .main section.three .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-section.team .main section.two .content h6 {
+section.team .main section.three .content .the-title {
   display: inline-block;
   margin: 32px 0;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
   position: relative;
 }
-section.team .main section.two .content h6::after {
+section.team .main section.three .content .the-title::after {
   content: "";
   height: 0;
   width: 48px;
@@ -50,7 +84,7 @@ section.team .main section.two .content h6::after {
   top: 50%;
   left: 115%;
 }
-section.team .main section.two .content h6::before {
+section.team .main section.three .content .the-title::before {
   content: "";
   height: 0;
   width: 48px;
@@ -59,88 +93,89 @@ section.team .main section.two .content h6::before {
   top: 50%;
   right: 115%;
 }
-section.team .main section.two .content img {
-  width: 90%;
-  margin: 16px auto 160px auto;
+section.team .main section.three .content .img-box {
+  width: 65%;
 }
-section.team .main section.two .content img:last-child {
-  margin-bottom: 16px;
+section.team .main section.three .content .img-box img {
+  width: 100%;
 }
-section.team .main section.three .title p {
+section.team .main section.four .title p,
+section.team .main section.four .title .p {
   display: inline;
 }
-section.team .main section.three .content {
+section.team .main section.four .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   position: relative;
 }
-section.team .main section.three .content .text {
+section.team .main section.four .content .text {
   width: 500px;
   position: absolute;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  z-index: 99;
 }
-section.team .main section.three .content .text:nth-child(1) {
+section.team .main section.four .content .text:nth-child(1) {
   top: 159.984px;
   margin-left: -245px;
 }
-section.team .main section.three .content .text:nth-child(2) {
+section.team .main section.four .content .text:nth-child(2) {
   top: 319.968px;
   margin-left: -30px;
 }
-section.team .main section.three .content .text:nth-child(3) {
+section.team .main section.four .content .text:nth-child(3) {
   top: 639.984px;
   margin-left: 35px;
 }
-section.team .main section.three .content .text:nth-child(4) {
+section.team .main section.four .content .text:nth-child(4) {
   top: 799.68px;
   margin-left: 249px;
 }
-section.team .main section.three .content .text:nth-child(odd) {
+section.team .main section.four .content .text:nth-child(odd) {
   text-align: right;
 }
-section.team .main section.three .content .text:nth-child(odd) .img-and-title {
+section.team .main section.four .content .text:nth-child(odd) .img-and-title {
   align-items: flex-end;
 }
-section.team .main section.three .content .text:nth-child(even) {
+section.team .main section.four .content .text:nth-child(even) {
   text-align: left;
 }
-section.team .main section.three .content .text:nth-child(even) .img-and-title {
+section.team .main section.four .content .text:nth-child(even) .img-and-title {
   align-items: flex-start;
   order: 1;
 }
-section.team .main section.three .content .text:nth-child(even) .line-and-dot {
+section.team .main section.four .content .text:nth-child(even) .line-and-dot {
   margin: 0 48px 0 24px;
   order: 0;
 }
-section.team .main section.three .content .text:nth-child(even) .line-and-dot::after {
+section.team .main section.four .content .text:nth-child(even) .line-and-dot::after {
   left: 100%;
 }
-section.team .main section.three .content .text:nth-child(even) .time {
+section.team .main section.four .content .text:nth-child(even) .time {
   order: -1;
 }
-section.team .main section.three .content .text .img-and-title {
+section.team .main section.four .content .text .img-and-title {
   width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-section.team .main section.three .content .text .img-and-title .img-box {
+section.team .main section.four .content .text .img-and-title .img-box {
   width: 160px;
 }
-section.team .main section.three .content .text .img-and-title .img-box img {
+section.team .main section.four .content .text .img-and-title .img-box img {
   width: 100%;
 }
-section.team .main section.three .content .text .img-and-title .titl {
+section.team .main section.four .content .text .img-and-title .titl {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
 }
-section.team .main section.three .content .text .line-and-dot {
+section.team .main section.four .content .text .line-and-dot {
   width: 14px;
   height: 14px;
   margin: 0 24px 0 48px;
@@ -148,7 +183,7 @@ section.team .main section.three .content .text .line-and-dot {
   background-color: #8dcac3;
   position: relative;
 }
-section.team .main section.three .content .text .line-and-dot::after {
+section.team .main section.four .content .text .line-and-dot::after {
   content: "";
   width: 48px;
   height: 0;
@@ -157,19 +192,19 @@ section.team .main section.three .content .text .line-and-dot::after {
   top: 50%;
   right: 100%;
 }
-section.team .main section.three .content .text .time {
+section.team .main section.four .content .text .time {
   width: 110px;
 }
-section.team .main section.three .content .line {
+section.team .main section.four .content .line {
   width: 280px;
   height: 480px;
 }
-section.team .main section.three .content .line.top {
+section.team .main section.four .content .line.top {
   margin-top: 80px;
   border-left: 1px solid #8dcac3;
   position: relative;
 }
-section.team .main section.three .content .line.top::before {
+section.team .main section.four .content .line.top::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -180,19 +215,19 @@ section.team .main section.three .content .line.top::before {
   bottom: 100%;
   left: -7px;
 }
-section.team .main section.three .content .line.top::after {
+section.team .main section.four .content .line.top::after {
   content: "2009";
   position: absolute;
   bottom: 108%;
   left: -24px;
 }
-section.team .main section.three .content .line.bottom {
+section.team .main section.four .content .line.bottom {
   border-top: 1px solid #8dcac3;
   border-right: 1px solid #8dcac3;
   position: relative;
   margin-bottom: 64px;
 }
-section.team .main section.three .content .line.bottom::before {
+section.team .main section.four .content .line.bottom::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -203,7 +238,7 @@ section.team .main section.three .content .line.bottom::before {
   top: 100%;
   right: -6px;
 }
-section.team .main section.three .content .line.bottom::after {
+section.team .main section.four .content .line.bottom::after {
   content: "";
   display: inline-block;
   width: 12px;
@@ -215,27 +250,27 @@ section.team .main section.three .content .line.bottom::after {
   top: 105%;
   right: -6px;
 }
-section.team .main section.four .title p,
-section.team .main section.six .title p {
+section.team .main section.two .title p,
+section.team .main section.two .title .p {
   display: inline;
 }
-section.team .main section.four .content,
-section.team .main section.six .content {
+section.team .main section.two .content {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
 }
-section.team .main section.four .content ul,
-section.team .main section.six .content ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+section.team .main section.two .content ul {
+  min-width: 340px;
+  height: 110vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-section.team .main section.four .content ul li,
-section.team .main section.six .content ul li {
+section.team .main section.two .content ul::-webkit-scrollbar {
+  display: none;
+}
+section.team .main section.two .content ul li {
   width: 300px;
   height: 80px;
   margin: 16px 0;
@@ -249,19 +284,15 @@ section.team .main section.six .content ul li {
   border-radius: 2px;
   position: relative;
 }
-section.team .main section.four .content ul li:hover,
-section.team .main section.six .content ul li:hover,
-section.team .main section.four .content ul li[isON="true"],
-section.team .main section.six .content ul li[isON="true"] {
+section.team .main section.two .content ul li:hover,
+section.team .main section.two .content ul li[isON="true"] {
   background-color: #f5b834;
   box-shadow: 0 0 6px #ddd;
 }
-section.team .main section.four .content ul li:first-child,
-section.team .main section.six .content ul li:first-child {
+section.team .main section.two .content ul li:first-child {
   margin-top: 0;
 }
-section.team .main section.four .content ul li::after,
-section.team .main section.six .content ul li::after {
+section.team .main section.two .content ul li::after {
   content: ">";
   height: 80px;
   font-size: 80px;
@@ -271,14 +302,11 @@ section.team .main section.six .content ul li::after {
   top: 0;
   right: 0;
 }
-section.team .main section.four .content ul li:hover::after,
-section.team .main section.six .content ul li:hover::after,
-section.team .main section.four .content ul li[isON="true"]::after,
-section.team .main section.six .content ul li[isON="true"]::after {
+section.team .main section.two .content ul li:hover::after,
+section.team .main section.two .content ul li[isON="true"]::after {
   color: rgba(204, 204, 204, 0.6);
 }
-section.team .main section.four .content ul li .img-box,
-section.team .main section.six .content ul li .img-box {
+section.team .main section.two .content ul li .img-box {
   width: 60px;
   height: 60px;
   margin: 0 16px;
@@ -286,39 +314,33 @@ section.team .main section.six .content ul li .img-box {
   overflow: hidden;
   background-color: #fafafa;
 }
-section.team .main section.four .content ul li .img-box img,
-section.team .main section.six .content ul li .img-box img {
+section.team .main section.two .content ul li .img-box img {
   width: 100%;
 }
-section.team .main section.four .content ul li .txt h5,
-section.team .main section.six .content ul li .txt h5 {
+section.team .main section.two .content ul li .txt h5 {
   margin: 0;
   font-size: 17px;
   line-height: 1.75;
 }
-section.team .main section.four .content ul li .txt p,
-section.team .main section.six .content ul li .txt p {
+section.team .main section.two .content ul li .txt p,
+section.team .main section.two .content ul li .txt .p {
   margin: 0;
   font-size: 13px;
   line-height: 1.75;
 }
-section.team .main section.four .content .post-box,
-section.team .main section.six .content .post-box {
+section.team .main section.two .content .post-box {
   border: 1px solid #a18d70;
   border-radius: 2px;
   margin: 16px 0 0 32px;
 }
-section.team .main section.four .content .post-box .post,
-section.team .main section.six .content .post-box .post {
-  display: none;
+section.team .main section.two .content .post-box .post {
   min-width: 36vw;
+  min-height: 80vh;
 }
-section.team .main section.four .content .post-box .post[animation="out"],
-section.team .main section.six .content .post-box .post[animation="out"] {
+section.team .main section.two .content .post-box .post[animation="out"] {
   animation: postOut 0.6s;
 }
-section.team .main section.four .content .post-box .post[animation="in"],
-section.team .main section.six .content .post-box .post[animation="in"] {
+section.team .main section.two .content .post-box .post[animation="in"] {
   animation: postIn .75s;
 }
 @keyframes postOut {
@@ -341,18 +363,24 @@ section.team .main section.six .content .post-box .post[animation="in"] {
     opacity: 1;
   }
 }
-section.team .main section.four .content .post-box .post[isOn="true"],
-section.team .main section.six .content .post-box .post[isOn="true"] {
-  display: inline-block;
+section.team .main section.two .content .post-box .post[isOn="false"] {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  min-width: 0;
+  min-height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: -999;
 }
-section.team .main section.four .content .post-box .post .img-box,
-section.team .main section.six .content .post-box .post .img-box {
+section.team .main section.two .content .post-box .post .img-box {
   width: 50%;
   margin: 56px auto 0 auto;
   position: relative;
 }
-section.team .main section.four .content .post-box .post .img-box::after,
-section.team .main section.six .content .post-box .post .img-box::after {
+section.team .main section.two .content .post-box .post .img-box::after {
   content: "";
   width: 165%;
   margin-left: -82.5%;
@@ -362,42 +390,42 @@ section.team .main section.six .content .post-box .post .img-box::after {
   bottom: -32px;
   left: 50%;
 }
-section.team .main section.four .content .post-box .post .img-box img,
-section.team .main section.six .content .post-box .post .img-box img {
+section.team .main section.two .content .post-box .post .img-box img {
   width: 100%;
 }
-section.team .main section.four .content .post-box .post .txt-box,
-section.team .main section.six .content .post-box .post .txt-box {
+section.team .main section.two .content .post-box .post .txt-box {
   margin-top: 64px;
   padding-left: 48px;
 }
-section.team .main section.four .content .post-box .post .txt-box h3,
-section.team .main section.six .content .post-box .post .txt-box h3 {
+section.team .main section.two .content .post-box .post .txt-box h3 {
   display: inline;
   border-bottom: 3px solid #af9166;
   padding-bottom: 4px;
 }
-section.team .main section.four .content .post-box .post .txt-box > p,
-section.team .main section.six .content .post-box .post .txt-box > p {
+section.team .main section.two .content .post-box .post .txt-box > p,
+section.team .main section.two .content .post-box .post .txt-box .p {
   font-size: 14px;
   color: #666;
 }
-section.team .main section.four .content .post-box .post .txt-box .cont,
-section.team .main section.six .content .post-box .post .txt-box .cont {
+section.team .main section.two .content .post-box .post .txt-box .cont {
   margin: 48px 0 32px 0;
   padding-right: 16px;
 }
-section.team .main section.four .content .post-box .post .txt-box .cont p,
-section.team .main section.six .content .post-box .post .txt-box .cont p {
+section.team .main section.two .content .post-box .post .txt-box .cont p,
+section.team .main section.two .content .post-box .post .txt-box .cont .p {
   text-indent: 32px;
   font-size: 16px;
   color: #333;
+}
+section.team .main section.two .content .post-box .post .txt-box .cont img {
+  display: none;
 }
 section.team .main section.five .content img {
   width: 117%;
   margin-top: 80px;
 }
-section.team .main section.six .title p {
+section.team .main section.six .title p,
+section.team .main section.six .title .p {
   display: inline;
 }
 section.team .main section[animation="out"] {

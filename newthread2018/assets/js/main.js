@@ -12,13 +12,13 @@ function headerOnTop() {
         oDiv2 = document.getElementById('_nav'),
         divT = getPos(oDiv1),
         name = oDiv1.className,
-        bool1 = true;
-    toTop(divT, bool1, oDiv1, oDiv2, name);
+        bool = true;
+    toTop(divT, oDiv1, oDiv2, name);
     window.onscroll = function() {
-        toTop(divT, bool1, oDiv1, oDiv2, name);
+        toTop(divT, oDiv1, oDiv2, name);
     };
 
-    function toTop(divT, bool, oDiv1, oDiv2, name) {
+    function toTop(divT, oDiv1, oDiv2, name) {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         if (scrollTop >= divT) {
             if (bool) {
@@ -53,7 +53,7 @@ function xxx() {
     for (let z = 0; z < objs.length; z++) {
         objs[z].onclick = function() {
             input.value = this.innerHTML;
-        }
+        };
     }
 }
 

@@ -23,22 +23,31 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="<?php  bloginfo( 'template_url' ); ?>/assets/css/style.css" />
 
-    <?php wp_head(  );
-    
-        //根据不同的页面加载css  
-        //在页面或文章的下方的 自定义栏目（默认关闭在右上方 显示选项 处打开）处修改
-        $_ = get_post_meta($post->ID, 'header', true); 
-        if (!empty($_)) {echo $_;}
-    ?> 
+    <?php wp_head(  ); ?> 
+
+    <?php 
+    //根据不同的页面加载css  
+            //在页面或文章的下方的 自定义栏目（默认关闭在右上方 显示选项 处打开）处修改
+            $_ = get_post_meta($post->ID, 'name', true); 
+            if (!empty($_)) {
+                echo "<link rel=\"stylesheet\" href=\"";
+                echo bloginfo( 'template_url' );
+                echo "/assets/css/$_.css\">";
+
+                echo "<script src=\"";
+                echo bloginfo( 'template_url' );
+                echo "/assets/js/$_.js\"  defer=\"defer\"></script>";
+
+            }?>
 
 </head>
 <body>
-<div id="page" class="site">
+<div id="main-page-all" class="site">
 
 <header class="header" id="header">
     <div class="search">
     <?php get_search_form(); ?>
-    <p><a href="##">民大官网</a> <span>/</span> <a href="###">回到旧版</a></p>
+    <p><a href="http://www.scuec.edu.cn">民大官网</a> <span>/</span> <a href="###">回到旧版</a></p>
 </div>
 
 <nav class="nav" id="nav">

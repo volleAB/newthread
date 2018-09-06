@@ -18,7 +18,7 @@ get_header( );
             <h1><?php the_title(); ?></h1>
             <div class="note-box">
                <div>
-                    <span class="author"><?php the_author()?></span>
+                    <span class="author">作者：管理员</span>
                     <span> | </span>
                     <?php the_date( "Y-m-d", "<span class='time'>","</span>" ) ;?>
                 </div>
@@ -53,20 +53,31 @@ get_header( );
                 <p class="h1">相关阅读</p>
         </div>
         <ul>
-            <?php
-            $posts=get_posts(array('category' =>$cat_id ,'numberposts' =>2 )); 
-            $i=0;
-            while ($posts[$i]) {?>
+
             <li class="list" >
                 <div class="img-box" >
-                    <img src="<?php echo getImgUrl($posts[$i]->post_content) ?>" alt="">
+                    <img src="<?php echo getImgUrl(get_previous_post()->post_content) ?>">
                 </div>
                <div class="txt-box">
-                    <a href="<?php echo  $posts[$i]->guid; ?>"> <h3><?php echo  $posts[$i]->post_title;?></h3> </a>
-                    <p><?php echo  $posts[$i]->post_excerpt ;?></p>
+                    <a href="<?php echo get_previous_post()->guid; ?>"> <h3><?php echo get_previous_post()->post_title;?></h3> </a>
+                    <p><?php echo get_previous_post()->post_excerpt;?></p>
                </div>
             </li>
-            <?php $i++;}?>
+
+             <li class="list" >
+                <div class="img-box" >
+                    <img src="<?php echo getImgUrl(get_next_post()->post_content) ?>">
+                </div>
+               <div class="txt-box">
+                    <a href="<?php echo get_next_post()->guid; ?>"> <h3><?php echo get_next_post()->post_title;?></h3> </a>
+                    <p><?php echo get_next_post()->post_excerpt;?></p>
+               </div>
+            </li>
+
+
+<!-- <p><?php// print_r(get_next_post())  ?></p>
+            <?php// if (get_previous_post()) { previous_post_link("上一篇: %link");} else {echo "没有了，已经是最后文章";} ?>
+<?php// if (get_next_post()) { next_post_link("下一篇: %link");} else {echo" 没有了，已经是最新文章";} ?> -->
         </ul>
  
     </div>

@@ -14,19 +14,20 @@ window.onload = function() {
             changePost(this.getAttribute("data-num"));
         };
     }
+    window.onhashchange = changePage;
 };
-window.onhashchange = changePage;
+
 
 
 function changePage(num = "one", bool = false) {
     var aims = getPurpose(),
         list = {
             "one": "团队介绍",
-            "two": "组织架构",
-            "three": "里程碑",
-            "four": "导师力量",
-            "five": "团队分站",
-            "six": "小组介绍"
+            "two": "小组介绍",
+            "three": "组织架构",
+            "four": "里程碑",
+            "five": "团队分站"
+                // "six": "导师力量"
         };
 
     bool ? aims = num : ""; //点击 .option 赋值 
@@ -142,7 +143,7 @@ function changePost(num = 0) {
                     timer2 = setTimeout(() => {
                         posts[z].setAttribute("isOn", "false");
 
-                        clearTimeout(timer2);
+                        // clearTimeout(timer2);
                     }, 499) : "";
             }
         }

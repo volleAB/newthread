@@ -1,0 +1,79 @@
+section.apply {
+    section {
+        &.one {
+            table {
+                width: 100%;
+                border-color: #fff;
+                tr {
+                    width: 100%;
+                    td {
+                        width: 50%;
+                        height: 48px; // border: 1px solid #000;
+                        &.w-100 {
+                            width: 100%;
+                        }
+                        label {
+                            width: 25%;
+                            margin: 0 16px;
+                            line-height: 48px;
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: #555;
+                        }
+                        input[type="text"] {
+                            width: 75%;
+                            height: 100%;
+                            border: none;
+                            border-left: 1px solid #ccc;
+                            outline: none;
+                            font-size: 18px; // color: #333;
+                            text-indent: 24px;
+                        }
+                    }
+                    &.team {
+                        .span-box {
+                            width: 100%;
+                            padding: 16px 72px 16px 0;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            align-items: center;
+                            text-align: end;
+                            span {
+                                flex: 0 1 100%/4;
+                                margin: 4px 0;
+                            }
+                        }
+                    }
+                    textarea {
+                        width: 95%;
+                        border: none;
+                        margin: 0 2.5%;
+                        outline: none;
+                        text-indent: 32px;
+                        font-size: 18px;
+                    }
+                    &.r textarea {
+                        height: 500px;
+                    }
+                    &.h textarea {
+                        height: 200px;
+                    }
+                }
+            }
+            span.submit {
+                display: inline-block;
+                margin: 24px 40% 0 40%;
+                padding: 8px 64px;
+                font-size: 18px;
+                color: #fff;
+                box-shadow: 0 0 8px #ccc;
+                outline: none;
+                border: none;
+                border-radius: 50px;
+                background-color: #8dcac3;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -3,8 +3,35 @@
 *2018.7.27
 *by fig
 */
+.h0 {
+  font-size: 32px;
+}
+.h1 {
+  font-size: 24px;
+}
+.h2 {
+  font-size: 20px;
+}
+.h3 {
+  font-size: 18px;
+}
+.h4 {
+  font-size: 16px;
+}
+.h5 {
+  font-size: 14px;
+}
+.h6 {
+  font-size: 13px;
+}
+.h7 {
+  font-size: 12px;
+}
 section.honor main {
   perspective: 1200px;
+}
+section.honor main header .option {
+  cursor: pointer;
 }
 section.honor main section {
   transform-style: preserve-3d;
@@ -12,7 +39,14 @@ section.honor main section {
   transform-origin: 50% 100%;
 }
 section.honor main section[isHide="true"] {
-  display: none;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: -999;
 }
 section.honor main section[animation="out"] {
   animation: pageOut 1s;
@@ -48,10 +82,14 @@ section.honor main section.three .content {
 }
 section.honor main section.one .content ul,
 section.honor main section.three .content ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  min-width: 340px;
+  height: 110vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+section.honor main section.one .content ul::-webkit-scrollbar,
+section.honor main section.three .content ul::-webkit-scrollbar {
+  display: none;
 }
 section.honor main section.one .content ul li,
 section.honor main section.three .content ul li {
@@ -98,7 +136,6 @@ section.honor main section.one .content .post-box .post,
 section.honor main section.three .content .post-box .post {
   min-height: 100vh;
   min-width: 40vw;
-  display: none;
 }
 section.honor main section.one .content .post-box .post[animation="out"],
 section.honor main section.three .content .post-box .post[animation="out"] {
@@ -128,9 +165,17 @@ section.honor main section.three .content .post-box .post[animation="in"] {
     opacity: 1;
   }
 }
-section.honor main section.one .content .post-box .post[isOn="true"],
-section.honor main section.three .content .post-box .post[isOn="true"] {
-  display: inline-block;
+section.honor main section.one .content .post-box .post[isOn="false"],
+section.honor main section.three .content .post-box .post[isOn="false"] {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: -999;
+  display: none;
 }
 section.honor main section.one .content .post-box .post > .txt-box,
 section.honor main section.three .content .post-box .post > .txt-box {
@@ -149,7 +194,9 @@ section.honor main section.three .content .post-box .post > .txt-box .cont {
   margin: 48px 0 64px 0;
 }
 section.honor main section.one .content .post-box .post > .txt-box .cont p,
-section.honor main section.three .content .post-box .post > .txt-box .cont p {
+section.honor main section.three .content .post-box .post > .txt-box .cont p,
+section.honor main section.one .content .post-box .post > .txt-box .cont .p,
+section.honor main section.three .content .post-box .post > .txt-box .cont .p {
   text-indent: 32px;
   font-size: 15px;
   color: #333;
@@ -217,7 +264,8 @@ section.honor main section.two .content .postList .box .top .time {
   font-size: 12px;
   color: #666;
 }
-section.honor main section.two .content .postList .box p {
+section.honor main section.two .content .postList .box p,
+section.honor main section.two .content .postList .box .p {
   text-indent: 32px;
   padding: 4px 12px;
   margin-top: 32px;
@@ -261,11 +309,12 @@ section.honor main section.three .content .post {
 }
 section.honor main section.three .content .post h2 {
   color: #57a0b1;
+  text-align: center;
 }
 section.honor main section.three .content .post .box {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 section.honor main section.three .content .post .box .img-box {
@@ -277,7 +326,8 @@ section.honor main section.three .content .post .box .img-box img {
 section.honor main section.three .content .post .box .txt-box {
   flex: 0 1 60%;
 }
-section.honor main section.three .content .post .box .txt-box .info p {
+section.honor main section.three .content .post .box .txt-box .info p,
+section.honor main section.three .content .post .box .txt-box .p {
   font-size: 14px;
 }
 section.honor main section.three .content .post .box .txt-box .hr {
@@ -287,8 +337,12 @@ section.honor main section.three .content .post .box .txt-box .hr {
   margin-top: 24px;
   margin-bottom: 48px;
 }
-section.honor main section.three .content .post .box .txt-box .cont p {
+section.honor main section.three .content .post .box .txt-box .cont p,
+section.honor main section.three .content .post .box .txt-box .p {
   text-indent: 32px;
+}
+section.honor main section.three .content .post .box .txt-box .cont img {
+  display: none;
 }
 section.honor main section.four .content {
   width: 100%;
@@ -341,6 +395,10 @@ section.honor main section.four .content .box .txt-box .excerpt {
 section.honor main section.four .content .box .txt-box .cont {
   margin-top: 48px;
 }
-section.honor main section.four .content .box .txt-box .cont p {
+section.honor main section.four .content .box .txt-box .cont img {
+  display: none;
+}
+section.honor main section.four .content .box .txt-box .cont p,
+section.honor main section.four .content .box .txt-box .cont .p {
   text-indent: 32px;
 }
