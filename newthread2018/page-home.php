@@ -1,6 +1,6 @@
 <?php
 /**
- * template name: 首页
+ * template name: 首页的
  *
  * 2018.7.19
  * v1.0.0
@@ -89,7 +89,7 @@ get_header();
                     </div>
 
                     <div class="txt-box">
-                        <a href="<?php bloginfo( "url" ); ?>/?page_id=1757#one">
+                        <a href="<?php bloginfo( "url" ); ?>/?page_id=169#one">
                             <h2><?php the_title(); ?></h2>
                         </a>
                         <?php the_content( );?>
@@ -128,23 +128,23 @@ get_header();
                                 $posts->the_post();
                     
                 ?>
+                <a href="<?php the_permalink( ); ?>">
                     <div class="box">
 
                         <div class="img-box">
                             <img src="<?php echo catch_that_image() ?>"> 
-                            <!-- 上线时取消注释 -->
+                            
                         </div>
 
                         <div class="txt-box">
-                            <a href="<?php the_permalink( ); ?>">
-                                <h4><?php the_title( ); ?></h4>
-                            </a>
                             
+                                <h4><?php the_title( ); ?></h4>
+              
                             <div class="p"><?php the_excerpt(  ); ?></div>
                             <span class="time"><?php echo get_the_date("Y-m-d") ; ?></span>
                         </div>
 
-                    </div>
+                    </div> </a>
                     
                 <?php  if (($i+1)%6==0 && ($i+1)!=$count) {?>
                     </div>

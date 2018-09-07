@@ -86,12 +86,12 @@ window.onload = function() {
             sx(-1, "two");
         };
     }
-    $("#after-three").onclick = function() {
-        sx(1, "three");
-    };
-    $("#before-three").onclick = function() {
-        sx(-1, "three");
-    };
+    // $("#after-three").onclick = function() {
+    //     sx(1, "three");
+    // };
+    // $("#before-three").onclick = function() {
+    //     sx(-1, "three");
+    // };
     // $("#after-four").onclick = function () {
     //     sx(1, "four");
     // };

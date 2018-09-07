@@ -161,12 +161,14 @@ nav.nav .menu > li:hover::after {
   transform: rotateY(0deg) rotateZ(0deg);
 }
 nav.nav .menu > li:first-child::after,
+nav.nav .menu > li:nth-child(3)::after,
 nav.nav .menu > li:nth-child(5)::after,
 nav.nav .menu > li:nth-child(6)::after,
 nav.nav .menu > li:nth-child(7)::after {
   display: none;
 }
 nav.nav .menu > li:first-child:hover > ul,
+nav.nav .menu > li:nth-child(3):hover > ul,
 nav.nav .menu > li:nth-child(5):hover > ul,
 nav.nav .menu > li:nth-child(6):hover > ul,
 nav.nav .menu > li:nth-child(7):hover > ul {

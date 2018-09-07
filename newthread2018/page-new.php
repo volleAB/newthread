@@ -100,18 +100,18 @@ get_header(  );
                     while ( $posts->have_posts() ) {
                         $posts->the_post();                   
                 ?>
-                        
+                        <a href="<?php the_permalink(  ); ?>">
                         <div class="box">
                             <div class="top">
                                 <span class="time-1"><?php echo substr(get_the_date("Y-m-d" ),5,5);  ?></span>
                                 <span class="time-2"><?php echo substr(get_the_date("Y-m-d" ),0,4);  ?></span>
                             </div>
                             <div class="txt-box">
-                            <a href="<?php the_permalink(  ); ?>">
-                                <h3><?php  the_title();?></h3></a>
+                            
+                                <h3><?php  the_title();?></h3>
                                 <div class="p"><?php the_excerpt(  ); ?></div>
                             </div>
-                        </div>
+                        </div></a>
                 <?php  $i++; } }?>
                 </div><!-- postLis-->
 

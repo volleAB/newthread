@@ -36,6 +36,7 @@ window.onload = function() {
 
 
 };
+var isFirst = true;
 window.onhashchange = changePage;
 
 function sx(num) {
@@ -111,32 +112,42 @@ function changePage(num = "one", bool = false) {
 
     function changeSection(num) { //内容也切换
         var pages = $(".pageOfNum");
-        for (let z = 0; z < pages.length; z++) {
-            const page = pages[z];
+        if (isFirst) {
+            for (let z = 0; z < pages.length; z++) {
+                const page = pages[z];
 
-
-            if (page.id == num) {
-
-                var timer1 = setTimeout(() => {
+                if (page.id == num) {
                     page.setAttribute("isHide", "false");
-                    page.setAttribute("animation", "in");
-
-                    clearTimeout(timer1);
-                }, 500);
-
-            } else {
-
-                page.setAttribute("animation", "out");
-
-                page.getAttribute("isHide") != "true" ?
-                    timer2 = setTimeout(() => {
-                        page.setAttribute("isHide", "true");
-
-                        clearTimeout(timer2);
-                    }, 499) : "";
-
+                    // page.setAttribute("animation", "in");
+                }
             }
-            // page.id == num ? page.setAttribute("isHide", "false") : page.setAttribute("isHide", "true");
+            isFirst = false;
+        } else {
+            for (let z = 0; z < pages.length; z++) {
+                const page = pages[z];
+                if (page.id == num) {
+
+                    var timer1 = setTimeout(() => {
+                        page.setAttribute("isHide", "false");
+                        page.setAttribute("animation", "in");
+
+                        clearTimeout(timer1);
+                    }, 500);
+
+                } else {
+
+                    page.setAttribute("animation", "out");
+
+                    page.getAttribute("isHide") != "true" ?
+                        timer2 = setTimeout(() => {
+                            page.setAttribute("isHide", "true");
+
+                            clearTimeout(timer2);
+                        }, 499) : "";
+
+                }
+                // page.id == num ? page.setAttribute("isHide", "false") : page.setAttribute("isHide", "true");
+            }
         }
     }
 
@@ -151,8 +162,8 @@ function changePage(num = "one", bool = false) {
     function getPurpose() { //获取锚点
         var url = window.location.href,
             ret = "";
-        ret = url.slice(url.indexOf("#"));
-        ret.slice(0, 1) !== "#" ? ret = "one" : ret = ret.slice(1);
+        ret = url.slice(url.indexOf("#_"));
+        ret.slice(0, 1) !== "#" ? ret = "one" : ret = ret.slice(2);
         return ret;
     }
 }

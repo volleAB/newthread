@@ -266,6 +266,7 @@ section.team {
                             background-color: rgb(250, 250, 250);
                             border: 1px solid rgba(175, 145, 102, 0.774);
                             border-radius: 2px;
+                            cursor: pointer;
                             &:hover,
                             &[isON="true"] {
                                 background-color: #f5b834;
@@ -365,13 +366,13 @@ section.team {
                                 z-index: -999;
                             }
                             .img-box {
-                                width: 50%;
-                                margin: 56px auto 0 auto;
+                                width: 40%;
+                                margin: 24px auto 0 auto;
                                 position: relative;
                                 &::after {
                                     content: "";
-                                    width: 165%;
-                                    margin-left: -82.5%;
+                                    width: 200%;
+                                    margin-left: -100%;
                                     height: 0;
                                     border-top: 1px solid #736550*1.8;
                                     position: absolute;
@@ -416,7 +417,10 @@ section.team {
             &.five {
                 .content {
                     img {
-                        width: 117%;
+                        display: block;
+                        margin: 0 auto;
+                        width: 90%;
+                        // height: 600px;
                         margin-top: 80px;
                     }
                 }

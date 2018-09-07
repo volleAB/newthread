@@ -134,7 +134,20 @@ get_header();
                     ?>
                         <div class="post" data-num="<?php echo  $j;?>" isOn="false">
                             <div class="img-box">
-                                <img src="<?php bloginfo( "template_url" ) ?>/assets/image/logo.png">
+                                <?php
+                                    $cat_id_team = get_category_by_slug('logo-team')->term_id; 
+                                    $posts_team=get_posts(  array('numberposts'=> 1 , 'category'=>$cat_id_team));
+                                    if ( $posts_team ) {
+                                        $i=0;
+                                    while ( $posts_team[$i] ) {
+                                ?>
+                                    
+                                    <img src="<?php echo getImgUrl($posts_team[$i]->post_content); ?>">
+                                    
+                                <?php 
+                                    $i++; }}
+                                    // $i=NULL;
+                                ?>
                             </div>
                             <div class="txt-box">
                                 <h3><?php the_title();?></h3>
@@ -293,7 +306,9 @@ get_header();
                     while ( $posts->have_posts() ) {
                         $posts->the_post();
                 ?>
-                <?php the_content( );?>
+                 <img src="<?php echo catch_that_image() ?>">
+                <?php //the_content( );?>
+
                 <?php }}?>
             </div>
         </section>

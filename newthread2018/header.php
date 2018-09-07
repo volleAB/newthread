@@ -53,7 +53,22 @@
 <nav class="nav" id="nav">
 <!-- 1 -->
     <div class="logo">  
-    <a href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo( 'template_url' ) ?>/assets/image/logo.png" alt="logo"></a>
+    <a href="<?php bloginfo( 'url' ) ?>">
+            <?php
+            $cat_id_top = get_category_by_slug('logo-top')->term_id; 
+            $posts_top=get_posts(  array('numberposts'=> 1 , 'category'=>$cat_id_top));
+                    if ( $posts_top ) {
+                        $i=0;
+                    while ( $posts_top[$i] ) {
+                ?>
+                       
+                     <img src="<?php echo getImgUrl($posts_top[$i]->post_content); ?>">
+                    
+                <?php 
+                    $i++; }}
+                    // $i=NULL;
+                ?>
+    </a>
     </div>
 <!-- 2 -->
     <?php wp_nav_menu(array('menu' =>'NT-top')); ?>

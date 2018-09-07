@@ -1,8 +1,94 @@
-/**
-*新闻中心。less
-2018.8.2
-by fig
-*/
+section.news {
+  width: 100%;
+  padding-top: 130px;
+  background-color: #aa2e2e;
+}
+section.news .backgrund {
+  width: 100%;
+  height: 350px;
+  margin-bottom: -140px;
+  background-image: url("../image/back-all.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.news main {
+  width: 70%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #fff;
+}
+section.news main header {
+  background-color: #ffffff;
+  box-shadow: 0 3px 8px #ddd;
+  margin-bottom: 16px;
+}
+section.news main header .top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  display: inline-block;
+  margin: 16px 16px 8px 16px;
+  padding: 6px 8px;
+  font-size: 16px;
+  border-bottom: 1px solid #af9166;
+}
+section.news main header .top a::after {
+  content: ">";
+  color: #000;
+}
+section.news main header .top svg {
+  width: 16px;
+  height: 16px;
+}
+section.news main header .top span {
+  color: #af9166;
+  border-bottom: 1px solid #af9166;
+}
+section.news main header .bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 24px;
+}
+section.news main header .bottom .option {
+  display: inline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+  cursor: pointer;
+}
+section.news main header .bottom .option svg {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+}
+section.news main header .bottom .on {
+  color: #af9166;
+}
+section.news main > section {
+  padding: 16px 48px 32px 48px;
+  background-color: #ffffff;
+}
+section.news main > section .title {
+  margin: 24px 0;
+  padding: 2px 16px;
+  border-left: 8px solid #ffd81b;
+  font-size: 32px;
+}
+section.news main > section .title i {
+  margin-left: 24px;
+  font-family: "Myriad Pro";
+  color: #736550;
+  font-size: 20px;
+}
+section.news main > section .title p {
+  display: inline;
+}
 section.news main > section .content .page-box[animation="out"] {
   animation: postListOut 0.6s;
 }
@@ -40,18 +126,18 @@ section.news main > section.one .content .box {
   flex: 0 1 24.8%;
   height: 100%;
   padding: 12px 12px 0 12px;
-  background-color: #57a0b1;
+  background-color: #af9166;
   border-radius: 2px;
   overflow: hidden;
 }
 section.news main > section.one .content .box:nth-child(even) {
-  background-color: #8dcac3;
+  background-color: #c8ad85;
 }
 section.news main > section.one .content .box .img-box {
   width: 100%;
   height: 140px;
   overflow: hidden;
-  background-color: #a0d3cd;
+  background-color: #d1bb9a;
 }
 section.news main > section.one .content .box .img-box img {
   width: 100%;
@@ -119,7 +205,7 @@ section.news main > section.two .content .box .img-box {
   height: 75%;
   margin-bottom: -32px;
   overflow: hidden;
-  background-color: rgba(160, 211, 205, 0.624);
+  background-color: rgba(209, 187, 154, 0.3);
   display: flex;
   align-items: center;
 }
@@ -139,7 +225,7 @@ section.news main > section.two .content .box > a span {
   display: block;
   width: 32px;
   height: 32px;
-  background-color: #57a0b1;
+  background-color: #c8ad85;
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
@@ -162,7 +248,7 @@ section.news main > section.three .content .btn-box span {
   text-align: center;
   font-size: 20px;
   color: #eee;
-  background-color: #8dcac3;
+  background-color: #af9166;
   cursor: pointer;
 }
 section.news main > section.three .content .page-box {
@@ -175,8 +261,8 @@ section.news main > section.three .content .page-box[isHide="true"] {
 }
 section.news main > section.three .content .page-box .box {
   flex: 0 1 23%;
-  border: 1px solid #8dcac3;
-  border-bottom: 4px solid #8dcac3;
+  border: 1px solid #af9166;
+  border-bottom: 4px solid #af9166;
   border-radius: 2px;
   position: relative;
 }
@@ -203,7 +289,7 @@ section.news main > section.three .content .page-box .box .txt-box .time {
   margin: 0;
 }
 section.news main > section.three .content .page-box .box .txt-box:hover {
-  background-color: #8dcac3;
+  background-color: #af9166;
 }
 section.news main > section.three .content .page-box .box a {
   display: inline-block;
@@ -211,7 +297,7 @@ section.news main > section.three .content .page-box .box a {
   height: 32px;
   margin: 0;
   padding: 0;
-  background-color: #8dcac3;
+  background-color: #af9166;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -251,7 +337,7 @@ section.news main > section.four .content .btn-box span {
   text-align: center;
   font-size: 20px;
   color: #eee;
-  background-color: #8dcac3;
+  background-color: #af9166;
   cursor: pointer;
 }
 section.news main > section.four .content .page-box {
@@ -269,7 +355,7 @@ section.news main > section.four .content .page-box[isHide="true"] {
 section.news main > section.four .content .page-box .box {
   flex: 0 1 31%;
   height: 56px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #999;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -278,7 +364,7 @@ section.news main > section.four .content .page-box .box .img-box {
   width: 16px;
   height: 28px;
   margin: 0 8px;
-  background-color: #8dcac3;
+  background-color: #c8ad85;
   position: relative;
 }
 section.news main > section.four .content .page-box .box .img-box::after {
@@ -297,28 +383,25 @@ section.news main > section.four .content .page-box .box .txt-box h3 {
   font-size: 16px;
   line-height: 1.75;
 }
-section.news main > section.five {
+section.news main > section.five .content {
+  width: 100%;
+  margin-bottom: 48px;
   position: relative;
 }
-section.news main > section.five #backTop {
-  width: 40px;
-  height: 40px;
-  background-color: #57a0b1;
+section.news main > section.five .content #backTop {
+  width: 36px;
+  height: 32px;
+  background-color: #c8ad85;
   font-size: 14px;
   text-align: center;
-  line-height: 40px;
+  line-height: 32px;
   font-weight: 600;
   color: #fff;
   transform: rotate(-90deg);
   position: absolute;
-  bottom: 20%;
-  left: 100%;
+  bottom: 0;
+  left: 105%;
   cursor: pointer;
-}
-section.news main > section.five .content {
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 48px;
 }
 section.news main > section.five .content .page-box {
   width: 100%;
@@ -340,7 +423,7 @@ section.news main > section.five .content .page-box .box {
   transition: all .25s;
 }
 section.news main > section.five .content .page-box .box:hover {
-  background-color: #57a0b1;
+  background-color: #c8ad85;
   color: #fff;
 }
 section.news main > section.five .content .page-box .box:hover .top {
@@ -356,8 +439,8 @@ section.news main > section.five .content .page-box .box .top {
   padding-right: 4px;
   padding-top: 24px;
   height: 85px;
-  background-color: #57a0b1;
-  border: 1px solid #57a0b1;
+  background-color: #c8ad85;
+  border: 1px solid #c8ad85;
   border-radius: 2px;
   text-align: end;
   color: #fff;

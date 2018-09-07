@@ -28,7 +28,7 @@ get_header( );
         </header>
         <section>
             <div class="ex">
-                <?php echo wpautop( the_excerpt(  ) );?>
+                <?php echo wpautop( the_excerpt());?>
             </div>
             <?php echo wpautop( the_content() );?>
         </section>
@@ -46,7 +46,7 @@ get_header( );
 
     <div class="sidebar">
         <div class="title">
-                <?php $cat_id = the_category_ID(false);  // 分类目录ID 可在编辑页的URL处查看
+                <?php $cat_id = the_category_ID(false);  
                 // echo get_cat_name($cat_id); 
                 // echo category_description($cat_id);
                 ?>

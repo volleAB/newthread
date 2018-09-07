@@ -282,6 +282,7 @@ section.team .main section.two .content ul li {
   background-color: #fafafa;
   border: 1px solid rgba(175, 145, 102, 0.774);
   border-radius: 2px;
+  cursor: pointer;
   position: relative;
 }
 section.team .main section.two .content ul li:hover,
@@ -376,14 +377,14 @@ section.team .main section.two .content .post-box .post[isOn="false"] {
   z-index: -999;
 }
 section.team .main section.two .content .post-box .post .img-box {
-  width: 50%;
-  margin: 56px auto 0 auto;
+  width: 40%;
+  margin: 24px auto 0 auto;
   position: relative;
 }
 section.team .main section.two .content .post-box .post .img-box::after {
   content: "";
-  width: 165%;
-  margin-left: -82.5%;
+  width: 200%;
+  margin-left: -100%;
   height: 0;
   border-top: 1px solid #cfb690;
   position: absolute;
@@ -421,7 +422,9 @@ section.team .main section.two .content .post-box .post .txt-box .cont img {
   display: none;
 }
 section.team .main section.five .content img {
-  width: 117%;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
   margin-top: 80px;
 }
 section.team .main section.six .title p,

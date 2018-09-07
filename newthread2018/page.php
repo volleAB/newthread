@@ -14,7 +14,7 @@ get_header( );?>
 <section id="main" class="main">
     <h1 style="text-align: center;">
 
-            系统错误，请联系管理员。
+            系统错误，请联系管理员！
 
         </h1>
 </section>

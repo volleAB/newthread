@@ -69,6 +69,7 @@ section.honor {
                         margin: 0;
                         padding: 16px 0;
                         border-bottom: 1px solid #aaa;
+                        cursor: pointer;
                         &:last-child {
                             border: none;
                         }
@@ -199,36 +200,40 @@ section.honor {
                             opacity: 1;
                         }
                     }
-                    .box {
+                    a {
                         flex: 0 0 30%;
-                        min-height: 260px;
-                        margin: 0 3.33%/2 48px 3.33%/2;
-                        border: 1px solid #ccc;
-                        border-top: 4px solid #57a0b1;
-                        border-radius: 2px;
-                        box-shadow: 1px 1px 6px #ddd;
-                        .top {
-                            background-color: #d2eae7*1.05;
-                            padding: 8px 16px;
-                            h3 {
-                                margin: 0; // padding: 4px 0;
-                                line-height: 1.75;
-                            }
-                            .time {
-                                margin: 0;
-                                font-size: 12px;
-                                color: #666;
-                            }
+                        &:hover{
+                            color: #333;
                         }
-                        p,
-                        .p {
-                            text-indent: 32px;
-                            padding: 4px 12px;
-                            margin-top: 32px;
+                        .box {
+                            min-height: 260px;
+                            margin: 0 3.33%/2 48px 3.33%/2;
+                            border: 1px solid #ccc;
+                            border-top: 4px solid #57a0b1;
+                            border-radius: 2px;
+                            box-shadow: 1px 1px 6px #ddd;
+                            .top {
+                                background-color: #d2eae7*1.05;
+                                padding: 8px 16px;
+                                h3 {
+                                    margin: 0; // padding: 4px 0;
+                                    line-height: 1.75;
+                                }
+                                .time {
+                                    margin: 0;
+                                    font-size: 12px;
+                                    color: #666;
+                                }
+                            }
+                            p,
+                            .p {
+                                text-indent: 32px;
+                                padding: 4px 12px;
+                                margin-top: 32px;
+                            }
                         }
                     }
-                }
-                // .page-navs {
+                } // .page-navs {
                 //     width: 100%;
                 //     padding: 8px 0;
                 //     text-align: center;

@@ -1,12 +1,91 @@
-/**
-*新闻中心。less
-2018.8.2
-by fig
-*/
-
 section.news {
+    width: 100%;
+    padding-top: 130px;
+    background-color: #aa2e2e;
+    .backgrund {
+        width: 100%;
+        height: 350px;
+        margin-bottom: -140px;
+        background-image: url("../image/back-all.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     main {
+        width: 70%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background-color: #fff;
+        header {
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 3px 8px #ddd;
+            margin-bottom: 16px;
+            .top {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                display: inline-block;
+                margin: 16px 16px 8px 16px;
+                padding: 6px 8px;
+                font-size: 16px;
+                border-bottom: 1px solid #af9166;
+                a::after {
+                    content: ">";
+                    color: #000;
+                }
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+                span {
+                    color: #af9166;
+                    border-bottom: 1px solid #af9166;
+                }
+            }
+            .bottom {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                padding-bottom: 24px;
+                .option {
+                    display: inline;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    font-size: 15px;
+                    cursor: pointer;
+                    svg {
+                        width: 36px;
+                        height: 36px;
+                        margin-bottom: 12px;
+                    }
+                }
+                .on {
+                    color: #af9166;
+                }
+            }
+        }
         &>section {
+            padding: 16px 48px 32px 48px;
+            background-color: rgb(255, 255, 255);
+            .title {
+                margin: 24px 0;
+                padding: 2px 16px;
+                border-left: 8px solid #ffd81b;
+                font-size: 32px;
+                i {
+                    margin-left: 24px;
+                    font-family: "Myriad Pro";
+                    color: #736550;
+                    font-size: 20px;
+                }
+                p {
+                    display: inline;
+                }
+            }
             .content .page-box {
                 &[animation="out"] {
                     animation: postListOut 0.6s
@@ -45,17 +124,17 @@ section.news {
                     flex: 0 1 24.8%;
                     height: 100%;
                     padding: 12px 12px 0 12px;
-                    background-color: #57a0b1;
+                    background-color: #af9166;
                     border-radius: 2px;
                     overflow: hidden;
                     &:nth-child(even) {
-                        background-color: #8dcac3;
+                        background-color: #c8ad85;
                     }
                     .img-box {
                         width: 100%;
                         height: 140px; // padding: 8px;
                         overflow: hidden;
-                        background-color: #a0d3cd;
+                        background-color: #d1bb9a;
                         img {
                             width: 100%;
                         }
@@ -123,7 +202,7 @@ section.news {
                         height: 75%;
                         margin-bottom: -32px;
                         overflow: hidden;
-                        background-color: rgba(160, 211, 205, 0.624);
+                        background-color: rgba(209, 187, 154, 0.3);
                         display: flex;
                         align-items: center;
                         img {
@@ -142,7 +221,7 @@ section.news {
                             display: block;
                             width: 32px;
                             height: 32px;
-                            background-color: #57a0b1;
+                            background-color: #c8ad85;
                             font-size: 24px;
                             font-weight: 600;
                             line-height: 32px;
@@ -166,7 +245,7 @@ section.news {
                         text-align: center;
                         font-size: 20px;
                         color: #eee;
-                        background-color: #8dcac3;
+                        background-color: #af9166;
                         cursor: pointer;
                     }
                 }
@@ -179,8 +258,8 @@ section.news {
                     }
                     .box {
                         flex: 0 1 23%;
-                        border: 1px solid #8dcac3;
-                        border-bottom: 4px solid #8dcac3;
+                        border: 1px solid #af9166;
+                        border-bottom: 4px solid #af9166;
                         border-radius: 2px;
                         .img-box {
                             width: 100%;
@@ -204,7 +283,7 @@ section.news {
                                 margin: 0;
                             }
                             &:hover {
-                                background-color: #8dcac3;
+                                background-color: #af9166;
                             }
                         }
                         position: relative;
@@ -214,7 +293,7 @@ section.news {
                             height: 32px;
                             margin: 0;
                             padding: 0;
-                            background-color: #8dcac3;
+                            background-color: #af9166;
                             position: absolute;
                             bottom: 0;
                             right: 0;
@@ -255,7 +334,7 @@ section.news {
                         text-align: center;
                         font-size: 20px;
                         color: #eee;
-                        background-color: #8dcac3;
+                        background-color: #af9166;
                         cursor: pointer;
                     }
                 }
@@ -273,7 +352,7 @@ section.news {
                     .box {
                         flex: 0 1 31%;
                         height: 56px;
-                        border-top: 1px solid #ccc;
+                        border-top: 1px solid #999;
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
@@ -281,7 +360,7 @@ section.news {
                             width: 16px;
                             height: 28px;
                             margin: 0 8px;
-                            background-color: #8dcac3;
+                            background-color: #c8ad85;
                             position: relative;
                             &::after {
                                 display: inline-block;
@@ -305,112 +384,109 @@ section.news {
                     }
                 }
             }
-            &.five {
+            &.five .content {
+                width: 100%; // overflow: hidden;
+                margin-bottom: 48px;
                 position: relative;
                 #backTop {
-                    width: 40px;
-                    height: 40px;
-                    background-color: #57a0b1;
+                    width: 36px;
+                    height: 32px;
+                    background-color: #c8ad85;
                     font-size: 14px;
                     text-align: center;
-                    line-height: 40px;
+                    line-height: 32px;
                     font-weight: 600;
                     color: #fff;
                     transform: rotate(-90deg);
                     position: absolute;
-                    bottom: 20%;
-                    left: 100%;
+                    bottom: 0;
+                    left: 105%;
                     cursor: pointer;
                 }
-                .content {
+                .page-box {
                     width: 100%;
-                    overflow: hidden;
-                    margin-bottom: 48px;
-                    .page-box {
-                        width: 100%;
-                        display: flex;
-                        padding-top: 16px;
-                        align-items: flex-start;
-                        justify-content: space-between;
-                        &[isHide="true"] {
-                            display: none;
-                        }
-                        .box {
-                            flex: 0 1 31%;
-                            min-height: 260px;
-                            padding: 16px;
-                            margin: 16px 0;
-                            border-radius: 2px;
-                            background-color: rgb(245, 245, 245);
-                            transition: all .25s;
-                            &:hover {
-                                background-color: #57a0b1;
-                                color: #fff;
-                                .top {
-                                    background-color: #fefefe;
-                                    color: #000;
-                                }
-                                .txt-box {
-                                    p {
-                                        color: #fff;
-                                    }
-                                }
-                            }
+                    display: flex;
+                    padding-top: 16px;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    &[isHide="true"] {
+                        display: none;
+                    }
+                    .box {
+                        flex: 0 1 31%;
+                        min-height: 260px;
+                        padding: 16px;
+                        margin: 16px 0;
+                        border-radius: 2px;
+                        background-color: rgb(245, 245, 245);
+                        transition: all .25s;
+                        &:hover {
+                            background-color: #c8ad85;
+                            color: #fff;
                             .top {
-                                width: 30%;
-                                margin-top: -30px;
-                                padding-right: 4px;
-                                padding-top: 24px;
-                                height: 85px;
-                                background-color: #57a0b1;
-                                border: 1px solid #57a0b1;
-                                border-radius: 2px;
-                                text-align: end;
-                                color: #fff;
-                                .time-1 {
-                                    font-size: 16px;
-                                    font-weight: 600;
-                                }
-                                .time-2 {
-                                    font-size: 12px;
-                                }
+                                background-color: #fefefe;
+                                color: #000;
                             }
                             .txt-box {
                                 p {
-                                    text-indent: 32px;
-                                    color: #666;
+                                    color: #fff;
                                 }
                             }
                         }
-                    }
-                    .dots {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        #previous,
-                        #next {
-                            cursor: pointer;
-                        }
-                        .dot {
-                            width: 12px;
-                            height: 12px;
-                            margin: 0 12px;
-                            border: 1px solid #333;
-                            border-radius: 50%;
-                            cursor: pointer;
-                            position: relative;
-                            &[isHide="false"]::after {
-                                content: "";
-                                width: 4px;
-                                height: 4px;
-                                border-radius: 50%;
-                                background-color: #333;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                margin-top: -2px;
-                                margin-left: -2px;
+                        .top {
+                            width: 30%;
+                            margin-top: -30px;
+                            padding-right: 4px;
+                            padding-top: 24px;
+                            height: 85px;
+                            background-color: #c8ad85;
+                            border: 1px solid #c8ad85;
+                            border-radius: 2px;
+                            text-align: end;
+                            color: #fff;
+                            .time-1 {
+                                font-size: 16px;
+                                font-weight: 600;
                             }
+                            .time-2 {
+                                font-size: 12px;
+                            }
+                        }
+                        .txt-box {
+                            p {
+                                text-indent: 32px;
+                                color: #666;
+                            }
+                        }
+                    }
+                }
+                .dots {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    #previous,
+                    #next {
+                        cursor: pointer;
+                    }
+                    .dot {
+                        width: 12px;
+                        height: 12px;
+                        margin: 0 12px;
+                        border: 1px solid #333;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        position: relative;
+                        &[isHide="false"]::after {
+                            content: "";
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            background-color: #333;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            margin-top: -2px;
+                            margin-left: -2px;
                         }
                     }
                 }

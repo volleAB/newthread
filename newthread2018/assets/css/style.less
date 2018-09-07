@@ -5,6 +5,7 @@
 *by fig
 *v1.3.0
 */
+
 @import "font-size.less";
 * {
     box-sizing: border-box;
@@ -137,12 +138,14 @@ nav.nav {
                 transform: rotateY(0deg) rotateZ(0deg);
             }
             &:first-child::after,
+            &:nth-child(3)::after,
             &:nth-child(5)::after,
             &:nth-child(6)::after,
             &:nth-child(7)::after {
                 display: none;
             }
             &:first-child:hover>ul,
+            &:nth-child(3):hover>ul,
             &:nth-child(5):hover>ul,
             &:nth-child(6):hover>ul,
             &:nth-child(7):hover>ul {
@@ -744,8 +747,7 @@ section.page-all {
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-around;
-                    font-size: 15px;
-                    // cursor: pointer;
+                    font-size: 15px; // cursor: pointer;
                     svg {
                         width: 36px;
                         height: 36px;

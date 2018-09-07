@@ -139,16 +139,17 @@ get_header(  );
                     while ( $posts->have_posts() ) {
                         $posts->the_post();                   
                 ?>
-                        
+                        <a href="<?php the_permalink(  ); ?>">
                         <div class="box">
                             <div class="top">
-                                <a href="<?php the_permalink(  ); ?>">
+                                
                             <h3><?php the_title(); ?></h3>
-                            </a>
+                            
                                 <span class="time"><?php echo get_the_date("Y-m-d"); ?></span>
                             </div>
                             <div class="p"><?php the_excerpt(); ?></div>
                         </div>
+                        </a>
 
                         <?php  if (($i+1)%6==0 && ($i+1)!=$count) {?>
                             </div>

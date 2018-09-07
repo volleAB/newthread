@@ -24,11 +24,11 @@ get_header(  );
                         </div>
                     </form>  
                     <div class="xxx-box">
-                        <span class="xxx-d">第一</span>
-                        <span class="xxx-d">第二</span>
-                        <span class="xxx-d">第三</span>
-                        <span class="xxx-d">第四</span>
-                        <span class="xxx-d">第五</span>
+                        <span class="xxx-d">团队</span>
+                        <span class="xxx-d">人员</span>
+                        <span class="xxx-d">成果</span>
+                        <span class="xxx-d">最新消息</span>
+                        <span class="xxx-d">优秀</span>
                     </div> 
         </div>
 		<main id="main" class="site-main" role="main">
@@ -38,9 +38,6 @@ get_header(  );
 
                 <header class="page-search-header">
                     <!-- <h1 class="page-search-title"><?php //printf("搜索 \" %s \" 的结果 ↓", get_search_query() ); ?></h1> -->
-
-
-
 
                 </header>
                 
